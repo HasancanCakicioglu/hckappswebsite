@@ -1,26 +1,123 @@
-import React, { useState } from 'react';
-import Navbar from '../components/Navbar';
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
+import Navbar from "../components/Navbar";
 
-function Contact() {
+const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState("");
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Ensure EmailJS is initialized
+    emailjs.init("5b2Gfq85-iEG15IRO"); // Replace with your EmailJS user ID
+
+    // Prepare the data for sending the email
+    const templateParams = {
+      from_name: formData.name,   // Sender's name (from the form input)
+      from_email: formData.email, // Sender's email (from the form input)
+      to_name: "HCK Apps Support", // Replace with recipient's name or dynamic value
+      message: formData.message,  // The message (from the form input)
+    };
+
+    emailjs
+      .send(
+        "service_svgpxsm", // Replace with your EmailJS service ID
+        "template_6ruwdyw", // Replace with your EmailJS template ID
+        templateParams
+      )
+      .then(
+        (response) => {
+          setStatus("Message sent successfully!");
+          setFormData({ name: "", email: "", message: "" });
+        },
+        (error) => {
+          setStatus("Failed to send message. Please try again.");
+        }
+      );
+  };
 
   return (
-    
-        <div className="bg-black text-white min-h-screen flex flex-col">
-          <Navbar />
-          <div className="bg-[#0a0b10] flex-1 flex justify-center items-center">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-[#00df9a] mb-4">
-                Under Construction
-              </h1>
-              <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-                This page is currently under construction. It will be completed and available to you soon.
-                Please be patient and check back later!
-              </p>
-            </div>
+    <div>
+      <header>
+        <Navbar />
+      </header>
+      <div className="w-full py-16 text-white px-4 bg-gray-800" style={{ minHeight: "calc(100vh - 96px)" }}>
+        <div className="max-w-[1240px] mx-auto grid lg:grid-cols-3 gap-8">
+          <div className="lg:col-span-2 my-4 flex flex-col justify-center items-start">
+            <h1 className="md:text-4xl sm:text-3xl text-2xl font-bold py-2 text-left">
+              Get in Touch with Us
+            </h1>
+            <p className="text-left">
+              If you have any questions, concerns, or simply want to say hello, feel free to reach out to us
+              through the form below. We're always here to assist you with any queries you may have, whether it's 
+              about our services, your account, or something else entirely. Don't hesitate to get in touch, as we 
+              value every message we receive and aim to respond as quickly as possible.
+            </p>
+            <p className="text-left mt-4">
+              Our team is dedicated to providing you with the best support, and we want to ensure your experience
+              with us is nothing short of excellent. Whether you need technical assistance, have a question about 
+              our products, or simply want to share your thoughts, we're eager to hear from you and assist in any 
+              way we can. Reach out now, and let's connect!
+            </p>
+          </div>
+          <div className="my-4 flex flex-col justify-center items-center lg:col-span-1 px-6 py-8 bg-white rounded-md shadow-lg">
+            <form onSubmit={handleSubmit} className="flex flex-col w-full">
+              <input
+                className="p-3 mb-4 rounded-md text-black"
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Your Name"
+                required
+              />
+              <input
+                className="p-3 mb-4 rounded-md text-black"
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                className="p-3 mb-4 rounded-md text-black"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Your Message"
+                rows={4}
+                required
+              />
+              <button
+                type="submit"
+                className="bg-[#00df9a] text-black rounded-md font-medium w-full px-6 py-3"
+              >
+                Send Message
+              </button>
+              {status && <p className="mt-4 text-center">{status}</p>}
+            </form>
           </div>
         </div>
-      );
-    
-}
-
+      </div>
+    </div>
+  );
+};
+  
 export default Contact;

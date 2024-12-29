@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@types/react-router-dom": "^5.3.3",
     "@types/styled-jsx": "^3.4.4",
     "cra-template": "1.2.0",
