@@ -1,6 +1,5 @@
 // Import necessary React components
 import React from 'react'; 
-import Navbar from '../components/Navbar';
 import { FaGooglePlay } from 'react-icons/fa'; // Google Play Store ikonu için react-icons import et
 
 function Apps() {
