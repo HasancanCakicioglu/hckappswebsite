@@ -39,7 +39,7 @@ const Footer = () => {
         </div>
 
         {/* Solutions, Support, and Company Sections */}
-        <div className='lg:col-span-2 grid sm:grid-cols-2 gap-4 mt-4'>
+        <div className=' lg:col-span-2 grid sm:grid-cols-2 gap-4 mt-4'>
           {/* Solutions Section */}
           <div className='flex flex-col items-center'>
             <h6 className='font-medium text-gray-400 text-lg'>Solutions</h6>
@@ -61,7 +61,7 @@ const Footer = () => {
           <div className='flex flex-col items-center'>
             <h6 className='font-medium text-gray-400 text-lg'>Company</h6>
             <ul className='text-center'>
-              <li className='py-1 text-sm'><Link to={"about-me"}>About Me</Link></li>
+              <li className='py-1 text-sm'><Link to={"/about-me"}>About Me</Link></li>
             </ul>
           </div>
 

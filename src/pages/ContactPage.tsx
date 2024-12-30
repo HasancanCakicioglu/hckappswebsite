@@ -53,29 +53,29 @@ const Contact = () => {
   };
 
   return (
-    <div>
-      <header>
-        <Navbar />
-      </header>
-      <div className="w-full py-16 text-white px-4 bg-gray-800" style={{ minHeight: "calc(100vh - 96px)" }}>
+    
+      <div className="w-full py-16 text-white px-4 " style={{ minHeight: "calc(100vh - 96px)" }}>
         <div className="max-w-[1240px] mx-auto grid lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2 my-4 flex flex-col justify-center items-start">
-            <h1 className="md:text-4xl sm:text-3xl text-2xl font-bold py-2 text-left">
+          {/* Left Section - Text */}
+          <div className="lg:col-span-2 flex flex-col justify-center items-start text-center lg:text-left mb-8 lg:mb-0">
+            <h1 className="md:text-4xl sm:text-3xl text-2xl font-bold py-2 text-[#00df9a]">
               Get in Touch with Us
             </h1>
-            <p className="text-left">
+            <p className="text-lg mb-4">
               If you have any questions, concerns, or simply want to say hello, feel free to reach out to us
               through the form below. We're always here to assist you with any queries you may have, whether it's 
               about our services, your account, or something else entirely. Don't hesitate to get in touch, as we 
               value every message we receive and aim to respond as quickly as possible.
             </p>
-            <p className="text-left mt-4">
+            <p className="text-lg mt-4">
               Our team is dedicated to providing you with the best support, and we want to ensure your experience
               with us is nothing short of excellent. Whether you need technical assistance, have a question about 
               our products, or simply want to share your thoughts, we're eager to hear from you and assist in any 
               way we can. Reach out now, and let's connect!
             </p>
           </div>
+          
+          {/* Right Section - Form */}
           <div className="my-4 flex flex-col justify-center items-center lg:col-span-1 px-6 py-8 bg-white rounded-md shadow-lg">
             <form onSubmit={handleSubmit} className="flex flex-col w-full">
               <input
@@ -111,13 +111,13 @@ const Contact = () => {
               >
                 Send Message
               </button>
-              {status && <p className="mt-4 text-center">{status}</p>}
+              {status && <p className="mt-4 text-center text-black font-bold">{status}</p>}
             </form>
           </div>
         </div>
       </div>
-    </div>
+    
   );
 };
-  
+
 export default Contact;

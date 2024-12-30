@@ -8,29 +8,30 @@ import NotfoundPage from './pages/NotfoundPage.tsx';
 import Apps from './pages/AppsPage.tsx';
 import PrivacyPolicy from './pages/PrivacyPolicyPage.tsx';
 import Contact from './pages/ContactPage.tsx';
+import Layout from './components/Layout.jsx';
 
 
 const router = createBrowserRouter([
   {
     "path": "/",
-    "element": <Home />,
+    "element": <Layout><Home /></Layout>,
     errorElement: <NotfoundPage />
   },
   {
     "path": "/apps",
-    "element": <Apps/>
+    "element": <Layout><Apps /></Layout>
   },
   {
     "path": "/about-me",
-    "element": <AboutMe />
+    "element": <Layout><AboutMe /></Layout>
   },
   {
     "path": "/contact",
-    "element": <Contact />
+    "element": <Layout><Contact /></Layout>
   },
   {
     "path": "/privacy-policy",
-    "element": <PrivacyPolicy />
+    "element": <Layout><PrivacyPolicy /></Layout>
   },
   
 ]);

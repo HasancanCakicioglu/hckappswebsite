@@ -6,7 +6,6 @@ import { FaGooglePlay } from 'react-icons/fa'; // Google Play Store ikonu için 
 function Apps() {
   return (
     <div className="bg-black text-white min-h-screen">
-        <Navbar />
         {/* Logo and Scroll Button */}
         <div className="flex justify-center items-center py-8 mb-8">
             <a href="#details" className="cursor-pointer flex flex-col items-center">
