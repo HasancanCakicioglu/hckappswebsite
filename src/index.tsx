@@ -10,6 +10,7 @@ import PrivacyPolicy from './pages/PrivacyPolicyPage.tsx';
 import Contact from './pages/ContactPage.tsx';
 import Layout from './components/Layout.jsx';
 import './i18n.ts';
+import PrivacyPolicyCryptobex from './pages/PrivacyPolicyCryptobex.tsx';
 
 
 const router = createBrowserRouter([
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
     "path": "/privacy-policy",
     "element": <Layout><PrivacyPolicy /></Layout>
   },
+  {
+    "path": "/privacy-policy-cryptobex",
+    "element": <Layout><PrivacyPolicyCryptobex /></Layout>
+  }
   
 ]);
 

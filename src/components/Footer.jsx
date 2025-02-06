@@ -72,6 +72,7 @@ const Footer = () => {
             <h6 className='font-medium text-gray-400 text-lg'>{t('footer.legal')}</h6>
             <ul className='text-center'>
               <li className='py-1 text-sm'><Link to={"/privacy-policy"}>{t('footer.privacypolicyvoidnote')}</Link></li>
+              <li className='py-1 text-sm'><Link to={"/privacy-policy-cryptobex"}>{t('footer.privacypolicycrypobex')}</Link></li>
             </ul>
           </div>
         </div>
