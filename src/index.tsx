@@ -9,6 +9,7 @@ import Apps from './pages/AppsPage.tsx';
 import PrivacyPolicy from './pages/PrivacyPolicyPage.tsx';
 import Contact from './pages/ContactPage.tsx';
 import Layout from './components/Layout.jsx';
+import './i18n.ts';
 
 
 const router = createBrowserRouter([

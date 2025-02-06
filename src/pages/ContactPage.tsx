@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation("contact");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -30,7 +32,7 @@ const Contact = () => {
     const templateParams = {
       from_name: formData.name,   // Sender's name (from the form input)
       from_email: formData.email, // Sender's email (from the form input)
-      to_name: "HCK Apps Support", // Replace with recipient's name or dynamic value
+      to_name: t("contact.hck_apps_support"), // Replace with recipient's name or dynamic value
       message: formData.message,  // The message (from the form input)
     };
 
@@ -42,11 +44,11 @@ const Contact = () => {
       )
       .then(
         (response) => {
-          setStatus("Message sent successfully!");
+          setStatus(t('contact.message_sends_successfully'));
           setFormData({ name: "", email: "", message: "" });
         },
         (error) => {
-          setStatus("Failed to send message. Please try again.");
+          setStatus(t('contact.message_sends_failed'));
         }
       );
   };
@@ -58,19 +60,13 @@ const Contact = () => {
           {/* Left Section - Text */}
           <div className="lg:col-span-2 flex flex-col justify-center items-start text-center lg:text-left mb-8 lg:mb-0">
             <h1 className="md:text-4xl sm:text-3xl text-2xl font-bold py-2 text-[#00df9a]">
-              Get in Touch with Us
+              {t("contact.get_in_touch_with_us")}
             </h1>
             <p className="text-lg mb-4">
-              If you have any questions, concerns, or simply want to say hello, feel free to reach out to us
-              through the form below. We're always here to assist you with any queries you may have, whether it's 
-              about our services, your account, or something else entirely. Don't hesitate to get in touch, as we 
-              value every message we receive and aim to respond as quickly as possible.
+              {t("contact.p1")}
             </p>
             <p className="text-lg mt-4">
-              Our team is dedicated to providing you with the best support, and we want to ensure your experience
-              with us is nothing short of excellent. Whether you need technical assistance, have a question about 
-              our products, or simply want to share your thoughts, we're eager to hear from you and assist in any 
-              way we can. Reach out now, and let's connect!
+              {t("contact.p2")}
             </p>
           </div>
           
@@ -83,7 +79,7 @@ const Contact = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                placeholder="Your Name"
+                placeholder={t("contact.your_name")}
                 required
               />
               <input
@@ -92,7 +88,7 @@ const Contact = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                placeholder="Your Email"
+                placeholder={t("contact.your_email")}
                 required
               />
               <textarea
@@ -100,7 +96,7 @@ const Contact = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Your Message"
+                placeholder={t("contact.your_message")}
                 rows={4}
                 required
               />
@@ -108,7 +104,7 @@ const Contact = () => {
                 type="submit"
                 className="bg-[#00df9a] text-black rounded-md font-medium w-full px-6 py-3"
               >
-                Send Message
+                {t("contact.send_message")}
               </button>
               {status && <p className="mt-4 text-center text-black font-bold">{status}</p>}
             </form>

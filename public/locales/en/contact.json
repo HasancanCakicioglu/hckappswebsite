@@ -1,0 +1,14 @@
+{
+    "contact":{
+        "hck_apps_support":"HCK Apps Support",
+        "message_sends_successfully":"Your message has been sent successfully.",
+        "message_sends_failed":"Your message could not be sent. Please try again later.",
+        "get_in_touch_with_us":"Get in touch with us",
+        "p1":"If you have any questions, concerns, or simply want to say hello, feel free to reach out to us through the form below. We're always here to assist you with any queries you may have, whether it's about our services, your account, or something else entirely. Don't hesitate to get in touch, as we value every message we receive and aim to respond as quickly as possible.",
+        "p2":"Our team is dedicated to providing you with the best support, and we want to ensure your experience with us is nothing short of excellent. Whether you need technical assistance, have a question about our products, or simply want to share your thoughts, we're eager to hear from you and assist in any way we can. Reach out now, and let's connect!",
+        "send_message":"Send Message",
+        "your_name":"Your Name",
+        "your_email":"Your Email",
+        "your_message":"Your Message"
+    }
+}

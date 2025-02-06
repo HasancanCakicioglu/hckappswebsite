@@ -1,8 +1,10 @@
 // Import necessary React components
 import React from 'react'; 
 import { FaGooglePlay } from 'react-icons/fa'; // Google Play Store ikonu için react-icons import et
+import { useTranslation } from "react-i18next";
 
 function Apps() {
+  const { t } = useTranslation("apps");
   return (
     <div className="bg-black text-white min-h-screen">
         {/* Logo and Scroll Button */}
@@ -18,43 +20,43 @@ function Apps() {
             <div className="container mx-auto px-4 py-8">
                 <div className="text-center">
                     <h1 className="text-4xl font-bold text-[#00df9a] mb-6">VoidNote</h1>
-                    <p className="text-lg mb-6">VoidNote is a cutting-edge notebook application designed to simplify and organize your notes effectively. With advanced features like tree-structured notes, analysis tools, and more, it caters to all your organizational needs.</p>
+                    <p className="text-lg mb-6">{t('apps.section1')}</p>
                 </div>
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mt-8">
                     {/* App Feature Example Cards */}
                     <div className="text-center">
                         <img src="/apps/voidnote/note_framed.png" alt="Note Example" className="w-full  object-cover" />
                         <div className="p-2">
-                            <h3 className="text-md font-bold text-black mb-1">Note Example</h3>
-                            <p className="text-black font-semibold text-sm">Create detailed notes with intuitive tools.</p>
+                            <h3 className="text-md font-bold text-black mb-1">{t('apps.title1')}</h3>
+                            <p className="text-black font-semibold text-sm">{t('apps.desc1')}</p>
                         </div>
                     </div>
                     <div className="text-center">
                         <img src="/apps/voidnote/tree_framed.png" alt="Tree Notes" className="w-full  object-cover" />
                         <div className="p-2">
-                            <h3 className="text-md font-bold text-black mb-1">Tree Notes</h3>
-                            <p className="text-black font-semibold text-sm">Organize notes hierarchically for easy navigation.</p>
+                            <h3 className="text-md font-bold text-black mb-1">{t('apps.title2')}</h3>
+                            <p className="text-black font-semibold text-sm">{t('apps.desc2')}</p>
                         </div>
                     </div>
                     <div className=" text-center">
                         <img src="/apps/voidnote/analysis_framed.png" alt="Analysis Tools" className="w-full  object-cover" />
                         <div className="p-2">
-                            <h3 className="text-md font-bold text-black mb-1">Analysis Tools</h3>
-                            <p className="text-black font-semibold text-sm">Gain insights with built-in analytical tools.</p>
+                            <h3 className="text-md font-bold text-black mb-1">{t('apps.title3')}</h3>
+                            <p className="text-black font-semibold text-sm">{t('apps.desc3')}</p>
                         </div>
                     </div>
                     <div className="text-center">
                         <img src="/apps/voidnote/calendar_framed.png" alt="Calendar Integration" className="w-full  object-cover" />
                         <div className="p-2">
-                            <h3 className="text-md font-bold text-black mb-1">Calendar Integration</h3>
-                            <p className="text-black font-semibold text-sm">Link notes with your calendar seamlessly.</p>
+                            <h3 className="text-md font-bold text-black mb-1">{t('apps.title4')}</h3>
+                            <p className="text-black font-semibold text-sm">{t('apps.desc4')}</p>
                         </div>
                     </div>
                     <div className="text-center">
                         <img src="/apps/voidnote/todo_framed.png" alt="To-Do List Integration" className="w-full  object-cover" />
                         <div className="p-2">
-                            <h3 className="text-md font-bold text-black mb-1">To-Do Lists</h3>
-                            <p className="text-black font-semibold text-sm">Manage tasks with integrated to-do lists.</p>
+                            <h3 className="text-md font-bold text-black mb-1">{t('apps.title5')}</h3>
+                            <p className="text-black font-semibold text-sm">{t('apps.desc5')}</p>
                         </div>
                     </div>
                 </div>
@@ -66,7 +68,7 @@ function Apps() {
                         rel="noopener noreferrer"
                         className="text-xl text-white flex items-center justify-center bg-[#00df9a] hover:bg-[#00c87b] py-2 px-4 rounded-full"
                     >
-                        <FaGooglePlay className="mr-2" /> Download on Google Play
+                        <FaGooglePlay className="mr-2" /> {t('apps.downloadgoogle')}
                     </a>
                 </div>
             </div>

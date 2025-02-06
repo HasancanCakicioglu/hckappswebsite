@@ -1,0 +1,8 @@
+{
+    "aboutMe": {
+      "aboutme": "About Me",
+      "paragraph1": "Hi, I’m <1>{{name}}</1>, a software developer with a strong focus on mobile app development using <3>Flutter</3>. I've been working with Flutter for about three years, building high-performance, user-friendly applications for iOS and Android. My passion for technology extends to Artificial Intelligence, an area I’ve been exploring for the past two years. I’ve worked on projects involving <5>AI</5> and machine learning, and I’m eager to dive deeper into this field. While Flutter is my main expertise, I’ve also gained experience in backend development, particularly with <7>Node.js</7>, which has helped me build full-stack applications. This experience allows me to create complete solutions that integrate both front-end and back-end components.",
+      "paragraph2": "I am currently in my final year at <1>Beykoz University</1>, studying Computer Science. As I prepare for my career, I aim to continue learning and applying my skills in mobile development, AI, and backend technologies, and I look forward to contributing to exciting projects in the future."
+    }
+  }
+  

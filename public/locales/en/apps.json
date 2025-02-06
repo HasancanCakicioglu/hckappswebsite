@@ -1,0 +1,16 @@
+{
+    "apps":{
+        "section1":"VoidNote is a cutting-edge notebook application designed to simplify and organize your notes effectively. With advanced features like tree-structured notes, analysis tools, and more, it caters to all your organizational needs.",
+        "desc1":"Create detailed notes with intuitive tools.",
+        "desc2":"Organize notes hierarchically for easy navigation.",
+        "desc3":"Gain insights with built-in analytical tools.",
+        "desc4":"Link notes with your calendar seamlessly.",
+        "desc5":"Manage tasks with integrated to-do lists.",
+        "title1":"Note Example",
+        "title2":"Tree Notes",
+        "title3":"Analysis Tools",
+        "title4":"Calendar Integration",
+        "title5":"To-Do Lists",
+        "downloadgoogle":"Download on Google Play"
+    }
+}

@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { Link, useLocation } from 'react-router-dom'; // useLocation import et
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const location = useLocation();  // Aktif sayfa bilgisini almak için kullanıyoruz
+  const { t } = useTranslation("navbar");
 
   const handleNav = () => {
     setNav(!nav);
@@ -22,12 +24,12 @@ const Navbar = () => {
         <Link to="/">HCK Apps</Link>
       </h1>
       <ul className='hidden md:flex'>
-        <li className='p-4'>
+        <li className='p-4 whitespace-nowrap'>
           <Link 
             to="/" 
             style={location.pathname === '/' ? activeLinkStyle : {}}  // Aktif sayfa kontrolü
           >
-            Home
+            {t('navbar.home')}
           </Link>
         </li>
         <li className='p-4'>
@@ -35,7 +37,7 @@ const Navbar = () => {
             to="/apps" 
             style={location.pathname === '/apps' ? activeLinkStyle : {}}
           >
-            Apps
+            {t('navbar.apps')}
           </Link>
         </li>
         <li className='p-4 whitespace-nowrap'>
@@ -43,7 +45,7 @@ const Navbar = () => {
             to="/about-me" 
             style={location.pathname === '/about-me' ? activeLinkStyle : {}}
           >
-            About Me
+            {t('navbar.aboutme')}
           </Link>
         </li>
         <li className='p-4'>
@@ -51,7 +53,7 @@ const Navbar = () => {
             to="/contact" 
             style={location.pathname === '/contact' ? activeLinkStyle : {}}
           >
-            Contact
+            {t('navbar.contact')}
           </Link>
         </li>
       </ul>
@@ -67,7 +69,7 @@ const Navbar = () => {
             to="/" 
             style={location.pathname === '/' ? activeLinkStyle : {}}
           >
-            Home
+            {t('navbar.home')}
           </Link>
         </li>
         <li className='p-4 border-b border-gray-600'>
@@ -75,7 +77,7 @@ const Navbar = () => {
             to="/apps" 
             style={location.pathname === '/apps' ? activeLinkStyle : {}}
           >
-            Apps
+            {t('navbar.apps')}
           </Link>
         </li>
         <li className='p-4 border-b border-gray-600'>
@@ -83,7 +85,7 @@ const Navbar = () => {
             to="/about-me" 
             style={location.pathname === '/about-me' ? activeLinkStyle : {}}
           >
-            About Me
+            {t('navbar.aboutme')}
           </Link>
         </li>
         <li className='p-4 border-b border-gray-600'>
@@ -91,7 +93,7 @@ const Navbar = () => {
             to="/contact" 
             style={location.pathname === '/contact' ? activeLinkStyle : {}}
           >
-            Contact
+            {t('navbar.contact')}
           </Link>
         </li>
       </ul>

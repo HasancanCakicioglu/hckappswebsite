@@ -1,0 +1,15 @@
+{
+    "contact": {
+      "hck_apps_support": "HCK Apps Desteği",
+      "message_sends_successfully": "Mesajınız başarıyla gönderildi.",
+      "message_sends_failed": "Mesajınız gönderilemedi. Lütfen daha sonra tekrar deneyin.",
+      "get_in_touch_with_us": "Bizimle iletişime geçin",
+      "p1": "Herhangi bir sorunuz, endişeniz varsa veya sadece merhaba demek istiyorsanız, aşağıdaki form aracılığıyla bizimle iletişime geçmekten çekinmeyin. Hizmetlerimiz, hesabınız veya başka herhangi bir konuda sorularınız varsa, size yardımcı olmak için buradayız. Aldığımız her mesajı önemsiyor ve mümkün olan en kısa sürede yanıt vermeyi hedefliyoruz.",
+      "p2": "Ekibimiz size en iyi desteği sağlamak için çalışıyor ve bizimle olan deneyiminizin mükemmel olmasını istiyoruz. İster teknik destek ihtiyacınız olsun, ister ürünlerimiz hakkında bir sorunuz olsun veya sadece düşüncelerinizi paylaşmak isteyin, sizden haber almak ve her şekilde yardımcı olmak için sabırsızlanıyoruz. Şimdi bizimle iletişime geçin ve bağlantı kuralım!",
+      "send_message": "Mesaj Gönder",
+      "your_name": "Adınız",
+        "your_email": "E-posta Adresiniz",
+        "your_message": "Mesajınız"
+    }
+  }
+  
