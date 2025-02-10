@@ -11,6 +11,17 @@
         "title3":"Analysis Tools",
         "title4":"Calendar Integration",
         "title5":"To-Do Lists",
+        "csection1": "Cryptobex is a groundbreaking crypto gaming platform that empowers you to experience the dynamic world of cryptocurrencies using real-time market data and simulated funds. It offers a risk-free arena to hone your trading tactics and master investment strategies, all while competing against global players.",
+        "cdesc1": "Dive into the live crypto market with up-to-date price feeds and detailed market insights.",
+        "cdesc2": "Measure your trading prowess by comparing your virtual portfolio on the global leaderboard.",
+        "cdesc3": "Secure your virtual assets in a robust, fully-featured digital wallet designed for crypto enthusiasts.",
+        "cdesc4": "Keep a vigilant eye on your open positions and adjust your strategies with precision.",
+        "cdesc5": "Execute orders swiftly and refine your tactics in a simulated environment that mirrors real-world market dynamics.",
+        "ctitle1": "Market",
+        "ctitle2": "Leaderboard",
+        "ctitle3": "Wallet",
+        "ctitle4": "Positions",
+        "ctitle5": "Orders",
         "downloadgoogle":"Download on Google Play"
     }
 }

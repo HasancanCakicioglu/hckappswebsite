@@ -9,14 +9,19 @@ function Apps() {
     <div className="bg-black text-white min-h-screen">
         {/* Logo and Scroll Button */}
         <div className="flex justify-center items-center py-8 mb-8">
-            <a href="#details" className="cursor-pointer flex flex-col items-center">
+            <a href="#details_voidnote" className="cursor-pointer flex flex-col items-center mr-2 ml-2">
                 <img src="/apps/voidnote/voidnote.png" alt="VoidNote Logo" className="w-16 h-16 mb-2 border-2 border-white rounded-lg p-2 object-contain" />
                 <p className="text-white mt-2 font-bold">VoidNote</p>{" "}
             </a>
+
+            <a href="#details_cryptobex" className="cursor-pointer flex flex-col items-center mr-2 ml-2">
+                <img src="/apps/cryptobex/cryptobex_logo.png" alt="Cryptobex Logo" className="w-16 h-16 mb-2 border-2 border-white rounded-lg p-2 object-contain" />
+                <p className="text-white mt-2 font-bold">Cryptobex</p>{" "}
+            </a>
         </div>
         
-        {/* App Details Section */}
-        <div id="details" className="bg-white text-black w-full">
+        {/* App Details Section Voidnote */}
+        <div id="details_voidnote" className="bg-white text-black w-full">
             <div className="container mx-auto px-4 py-8">
                 <div className="text-center">
                     <h1 className="text-4xl font-bold text-[#00df9a] mb-6">VoidNote</h1>
@@ -71,6 +76,54 @@ function Apps() {
                         <FaGooglePlay className="mr-2" /> {t('apps.downloadgoogle')}
                     </a>
                 </div>
+            </div>
+        </div>
+        <div className="w-full h-[100px] bg-black"></div>
+        <div id="details_cryptobex" className="bg-white text-black w-full">
+            <div className="container mx-auto px-4 py-8">
+                <div className="text-center">
+                    <h1 className="text-4xl font-bold text-[#e6c741] mb-6">Cryptobex</h1>
+                    <p className="text-lg mb-6">{t('apps.csection1')}</p>
+                </div>
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mt-8">
+                    {/* App Feature Example Cards */}
+                    <div className="text-center">
+                        <img src="/apps/cryptobex/market_framed.png" alt="Note Example" className="w-full  object-cover" />
+                        <div className="p-2">
+                            <h3 className="text-md font-bold text-black mb-1">{t('apps.ctitle1')}</h3>
+                            <p className="text-black font-semibold text-sm">{t('apps.cdesc1')}</p>
+                        </div>
+                    </div>
+                    <div className="text-center">
+                        <img src="/apps/cryptobex/leaderboard_framed.png" alt="Tree Notes" className="w-full  object-cover" />
+                        <div className="p-2">
+                            <h3 className="text-md font-bold text-black mb-1">{t('apps.ctitle2')}</h3>
+                            <p className="text-black font-semibold text-sm">{t('apps.cdesc2')}</p>
+                        </div>
+                    </div>
+                    <div className=" text-center">
+                        <img src="/apps/cryptobex/wallet_framed.png" alt="Analysis Tools" className="w-full  object-cover" />
+                        <div className="p-2">
+                            <h3 className="text-md font-bold text-black mb-1">{t('apps.ctitle3')}</h3>
+                            <p className="text-black font-semibold text-sm">{t('apps.cdesc3')}</p>
+                        </div>
+                    </div>
+                    <div className="text-center">
+                        <img src="/apps/cryptobex/open_positions_framed.png" alt="Calendar Integration" className="w-full  object-cover" />
+                        <div className="p-2">
+                            <h3 className="text-md font-bold text-black mb-1">{t('apps.ctitle4')}</h3>
+                            <p className="text-black font-semibold text-sm">{t('apps.cdesc4')}</p>
+                        </div>
+                    </div>
+                    <div className="text-center">
+                        <img src="/apps/cryptobex/open_orders_framed.png" alt="To-Do List Integration" className="w-full  object-cover" />
+                        <div className="p-2">
+                            <h3 className="text-md font-bold text-black mb-1">{t('apps.ctitle5')}</h3>
+                            <p className="text-black font-semibold text-sm">{t('apps.cdesc5')}</p>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>

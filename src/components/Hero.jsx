@@ -45,6 +45,14 @@ const Hero = () => {
                 />
                 <p className="text-white mt-2 font-bold">{t('home.voidNote')}</p>
               </Link>
+              <Link to="/apps" className="flex flex-col items-center">
+                <img
+                  src="/apps/cryptobex/cryptobex_logo.png"
+                  alt="App 1"
+                  className="w-16 h-16 mb-2 border-2 border-white rounded-lg p-2"
+                />
+                <p className="text-white mt-2 font-bold">Cryptobex</p>
+              </Link>
             </div>
           </div>
         </div>
