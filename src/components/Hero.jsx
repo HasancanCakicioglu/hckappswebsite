@@ -8,11 +8,11 @@ const Hero = () => {
 
   return (
     <div className="text-white">
-      <div className="max-w-[800px] mt-[-96px] w-full h-screen mx-auto text-center flex flex-col justify-center">
-        <p className="text-[#00df9a] font-bold p-2">
+      <div className="max-w-[800px] w-full min-h-[calc(100vh-96px)] mx-auto text-center flex flex-col justify-center">
+        <p className="text-[#00df9a] font-bold py-2">
           {t('home.tagline')}
         </p>
-        <h1 className="md:text-7xl sm:text-6xl text-4xl font-bold md:py-6">
+        <h1 className="md:text-7xl sm:text-6xl text-4xl font-bold md:py-2">
           {t('home.heading')}
         </h1>
         <p className="md:text-4xl sm:text-3xl text-xl font-bold py-4">

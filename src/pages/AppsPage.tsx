@@ -68,7 +68,7 @@ function Apps() {
                 {/* Google Play Store Button */}
                 <div className="flex justify-center mt-8">
                     <a 
-                        href="https://play.google.com/store/apps/details?id=com.hck.voidnote&hl=en" 
+                        href="https://play.google.com/store/apps/details?id=com.hck.voidnote&pcampaignid=web_share" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="text-xl text-white flex items-center justify-center bg-[#00df9a] hover:bg-[#00c87b] py-2 px-4 rounded-full"
@@ -123,8 +123,19 @@ function Apps() {
                         </div>
                     </div>
                 </div>
-                
+                {/* Google Play Store Button */}
+            <div className="flex justify-center mt-8 ">
+                    <a 
+                        href="https://play.google.com/store/apps/details?id=com.hck.cryptobex&pcampaignid=web_share" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-xl text-white flex items-center justify-center bg-[#00df9a] hover:bg-[#00c87b] py-2 px-4 rounded-full"
+                    >
+                        <FaGooglePlay className="mr-2" /> {t('apps.downloadgoogle')}
+                    </a>
+                </div>
             </div>
+            
         </div>
     </div>
   );
