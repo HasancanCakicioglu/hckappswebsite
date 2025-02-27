@@ -1,6 +1,6 @@
 // Import necessary React components
 import React from 'react'; 
-import { FaGooglePlay } from 'react-icons/fa'; // Google Play Store ikonu için react-icons import et
+import { FaGooglePlay,FaApple } from 'react-icons/fa'; // Google Play Store ikonu için react-icons import et
 import { useTranslation } from "react-i18next";
 
 function Apps() {
@@ -66,16 +66,28 @@ function Apps() {
                     </div>
                 </div>
                 {/* Google Play Store Button */}
-                <div className="flex justify-center mt-8">
-                    <a 
-                        href="https://play.google.com/store/apps/details?id=com.hck.voidnote&pcampaignid=web_share" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-xl text-white flex items-center justify-center bg-[#00df9a] hover:bg-[#00c87b] py-2 px-4 rounded-full"
-                    >
-                        <FaGooglePlay className="mr-2" /> {t('apps.downloadgoogle')}
-                    </a>
-                </div>
+                <div className="flex justify-center mt-8 space-x-4">
+  {/* Google Play Store Butonu */}
+  <a 
+    href="https://play.google.com/store/apps/details?id=com.hck.voidnote&pcampaignid=web_share" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="text-xl text-white flex items-center justify-center bg-[#00df9a] hover:bg-[#00c87b] py-2 px-4 rounded-full"
+  >
+    <FaGooglePlay className="mr-2" /> {t('apps.downloadgoogle')}
+  </a>
+
+  {/* Apple App Store Butonu */}
+  <a 
+    href="https://apps.apple.com/tr/app/voidnote-notepad/id6742448208?l=tr&platform=iphone" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="text-xl text-white flex items-center justify-center bg-[#000000] hover:bg-[#333333] py-2 px-4 rounded-full"
+  >
+    <FaApple className="mr-2" /> {t('apps.downloadapple')}
+  </a>
+</div>
+
             </div>
         </div>
         <div className="w-full h-[100px] bg-black"></div>
