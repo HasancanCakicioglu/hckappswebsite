@@ -23,6 +23,15 @@
         "ctitle4": "Positions",
         "ctitle5": "Orders",
         "downloadgoogle":"Download on Google Play",
-        "downloadapple":"Download on App Store"
+        "downloadapple":"Download on App Store",
+        "psection1": "Photo Translator is an innovative mobile application designed to help you translate text from images in real-time using your device's camera or photo gallery. It simplifies communication when traveling abroad and offers powerful translation features.",
+        "pdesc1": "Capture images with your camera or select them from your gallery for instant, real-time text translation using advanced machine learning.",
+        "pdesc2": "Get immediate translations of foreign signs and text while traveling abroad, making it easier to understand unfamiliar surroundings.",
+        "pdesc3": "Accurately translate recognized text into a wide range of languages, ensuring you stay connected no matter where you are.",
+        "ptitle1": "Camera & Gallery Translation",
+        "ptitle2": "Travel & Foreign Sign Translation",
+        "ptitle3": "Multi-Language Support"
+
+
     }
 }

@@ -73,6 +73,7 @@ const Footer = () => {
             <ul className='text-center'>
               <li className='py-1 text-sm'><Link to={"/privacy-policy"}>{t('footer.privacypolicyvoidnote')}</Link></li>
               <li className='py-1 text-sm'><Link to={"/privacy-policy-cryptobex"}>{t('footer.privacypolicycrypobex')}</Link></li>
+              <li className='py-1 text-sm'><Link to={"/privacy-policy-phototranslator"}>{t('footer.privacypolicyphototranslator')}</Link></li>
             </ul>
           </div>
         </div>

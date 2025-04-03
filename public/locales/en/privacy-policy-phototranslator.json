@@ -1,0 +1,38 @@
+{
+    "photoTranslator": {
+      "title": "Photo Translator Privacy Policy",
+      "effectiveDateLabel": "Effective Date: ",
+      "effectiveDate": "April 1, 2025",
+      "section1Title": "1. Introduction",
+      "section1Text": "At Photo Translator (\"the App\", \"we\", \"us\", or \"our\"), we value your privacy. This Privacy Policy explains how we process your information when you use the Photo Translator mobile application. Our app allows you to recognize and translate the text in photos selected using your device's camera or gallery.",
+      "importantNoteLabel": "Important Note: ",
+      "importantNote": "Photo Translator does not collect, store, or transmit any personally identifiable information of its users. All processes (such as text recognition, translation, etc.) are carried out locally on your device.",
+      "section2Title": "2. The Information We Collect (or Rather, Do Not Collect)",
+      "section2Text1": "The application requires certain permissions and access in order to perform its basic functions; however, these accesses are not intended for the collection of personal data:",
+      "section2ListItem1": "<0>Camera Access:</0> Only when you choose to capture a photo for text recognition and translation will access to your camera be granted with your permission. The captured photo is not sent to any server; the process is carried out solely on your device.",
+      "section2ListItem2": "<0>Gallery/Photo Archive Access:</0> Only when you choose a photo from your gallery for text recognition and translation will access to your gallery be granted with your permission. The selected photo is not sent to any server; the process is carried out solely on your device.",
+      "section2ListItem3": "<0>ML Kit Models:</0> The app uses ML Kit technology developed by Google to provide functions such as text recognition and translation. This technology may require downloading the relevant language models to your device. Although this download process occurs via Google's servers, your personal data or the photos/text you process are not shared with Google. The downloaded models are stored on your device and enable offline operation.",
+      "section2Text2": "We reiterate that we do not collect or store any data that can personally identify you, such as your name, email address, location, IP address, device identifier, or usage habits.",
+      "section3Title": "3. How We Use Your Information",
+      "section3Text": "The application uses the permissions and ML Kit models solely for the following purposes:",
+      "section3ListItem1": "To recognize the text in the photo you capture or select, locally on your device.",
+      "section3ListItem2": "To translate the recognized text into the target language you select, locally on your device.",
+      "section3ListItem3": "To provide the core features of the application (photo selection, text display, etc.).",
+      "processingNoteLabel": "Processing Note: ",
+      "processingNote": "Processed photos and text are temporarily stored in your device's memory and are not retained or transmitted anywhere after processing is complete.",
+      "section4Title": "4. Data Security",
+      "section4Text": "Although we do not collect user data, we place a high priority on the security of the application itself and the technologies it uses (such as ML Kit). Since all operations are carried out locally on your device, there is no risk of unauthorized access to your data over the internet. The downloaded ML Kit models are protected under the security mechanisms provided by the operating system.",
+      "section5Title": "5. Children's Privacy",
+      "section5Text": "Our application is intended for a general audience and does not knowingly collect personal information from children under the age of 13 (or the equivalent minimum age in your jurisdiction). By its nature, the app does not collect personal data, thereby posing no additional risk to children's privacy.",
+      "section6Title": "6. Third-Party Services",
+      "section6Text": "Our application uses third-party technologies, such as Google ML Kit, to provide its core functionalities. The downloading of ML Kit models may be subject to Google's terms of service. Beyond this, we do not share data with any other third-party service.",
+      "section7Title": "7. Changes to This Privacy Policy",
+      "section7Text": "We may update this Privacy Policy from time to time. When significant changes are made, we will notify you by publishing the updated policy within the app or on the relevant app store page. We recommend that you review the policy periodically.",
+      "section8Title": "8. Contact Us",
+      "section8Text": "If you have any questions or concerns regarding this Privacy Policy, please do not hesitate to contact us:",
+      "contactEmail": "hckapplications@gmail.com",
+      "section8ListItem1": "<0>Email:</0> <1>{{contactEmail}}</1>",
+      "finalText": "By using Photo Translator, you acknowledge that you have read and understood this Privacy Policy."
+    }
+  }
+  

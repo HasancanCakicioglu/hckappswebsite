@@ -11,6 +11,7 @@ import Contact from './pages/ContactPage.tsx';
 import Layout from './components/Layout.jsx';
 import './i18n.ts';
 import PrivacyPolicyCryptobex from './pages/PrivacyPolicyCryptobex.tsx';
+import PrivacyPolicyPhotoTranslator from './pages/PrivacyPolicyPhotoTranslator.tsx';
 
 
 const router = createBrowserRouter([
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
     errorElement: <NotfoundPage />
   },
   {
-    "path": "/apps",
+    path: "/apps/:appId?",
     "element": <Layout><Apps /></Layout>
   },
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
   {
     "path": "/privacy-policy-cryptobex",
     "element": <Layout><PrivacyPolicyCryptobex /></Layout>
+  },
+  {
+    "path": "/privacy-policy-phototranslator",
+    "element": <Layout><PrivacyPolicyPhotoTranslator /></Layout>
   }
   
 ]);
