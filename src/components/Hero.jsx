@@ -33,7 +33,7 @@ const Hero = () => { // TypeScript için FC tipi eklendi (opsiyonel)
         </p>
 
         {/* Uygulama ikonları bölümü */}
-        <div className="flex justify-center mt-10 md:mt-12"> {/* Üst margin ayarlandı */}
+        <div className="flex justify-center mt-10 md:mt-12 mb-4"> {/* Üst margin ayarlandı */}
           <div className="text-center">
             <p className="font-bold mb-4">{t('home.discoverApps', 'Discover Our Apps')}</p> {/* Fallback eklendi */}
             <hr className="border-t-2 border-white mb-6 md:mb-8 w-3/4 md:w-full mx-auto" /> {/* Alt margin ve genişlik ayarlandı */}
@@ -91,6 +91,7 @@ const Hero = () => { // TypeScript için FC tipi eklendi (opsiyonel)
             </div>
           </div>
         </div>
+      
       </div>
     </div>
   );
