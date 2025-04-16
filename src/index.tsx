@@ -12,6 +12,7 @@ import Layout from './components/Layout.jsx';
 import './i18n.ts';
 import PrivacyPolicyCryptobex from './pages/PrivacyPolicyCryptobex.tsx';
 import PrivacyPolicyPhotoTranslator from './pages/PrivacyPolicyPhotoTranslator.tsx';
+import PrivacyPolicyStopwatchSkull from './pages/PrivacyPolicyStopwatch.tsx';
 
 
 const router = createBrowserRouter([
@@ -43,6 +44,14 @@ const router = createBrowserRouter([
   {
     "path": "/privacy-policy-phototranslator",
     "element": <Layout><PrivacyPolicyPhotoTranslator /></Layout>
+  },
+  {
+    "path": "/privacy-policy-stopwatchskull",
+    "element": <Layout><PrivacyPolicyStopwatchSkull /></Layout>
+  },
+  {
+    "path": "*",
+    "element": <NotfoundPage />
   }
   
 ]);

@@ -1,0 +1,21 @@
+{
+    "stopwatchSkull": {
+      "title": "Stopwatch Skull Privacy Policy",
+      "effectiveDateLabel": "Effective Date: ",
+      "effectiveDate": "April 17, 2025",
+      "section1Title": "1. Introduction",
+      "section1Text": "Stopwatch Skull is a simple stopwatch application. This application has been developed for time measurement and does not collect any personal data from its users.",
+      "section2Title": "2. Data Not Collected",
+      "section2Text": "Our application does not collect any personal data such as location, IP address, device information, or usage habits. All operations are executed locally on your device.",
+      "section3Title": "3. Data Processing and Usage",
+      "section3Text": "The Stopwatch Skull application does not perform any data processing, storage, or sharing procedures. All operations are temporarily held in your device's memory and are deleted once the process is complete.",
+      "section4Title": "4. Data Security",
+      "section4Text": "Due to the non-collection of personal data, the risks associated with data security are minimal. Since the application only runs locally on your device, there is no risk of data leakage to external parties.",
+      "section5Title": "5. Contact Us",
+      "section5Text": "If you have any questions, comments, or suggestions regarding Stopwatch Skull, please reach out to us via the email address below:",
+      "section5ListItem1": "<0>Email:</0> <1>{{contactEmail}}</1>",
+      "finalText": "By using the Stopwatch Skull application, you acknowledge that you have read and understood this privacy policy.",
+      "contactEmail": "hckapplications@gmail.com"
+    }
+  }
+  

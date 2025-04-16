@@ -1,0 +1,21 @@
+{
+    "stopwatchSkull": {
+      "title": "Stopwatch Skull Gizlilik Politikası",
+      "effectiveDateLabel": "Yürürlük Tarihi: ",
+      "effectiveDate": "17 Nisan 2025",
+      "section1Title": "1. Giriş",
+      "section1Text": "Stopwatch Skull, yalnızca basit bir kronometre uygulamasıdır. Bu uygulama, zaman ölçümü yapma amacıyla geliştirilmiş olup, kullanıcılarından hiçbir kişisel veri toplamamaktadır.",
+      "section2Title": "2. Toplanmayan Veriler",
+      "section2Text": "Uygulamamız; konum, IP adresi, cihaz bilgisi ya da kullanım alışkanlıkları gibi kişisel verileri hiçbir şekilde toplamamaktadır. İşlemler yalnızca cihazınız üzerinde yerel olarak gerçekleştirilir.",
+      "section3Title": "3. Veri İşleme ve Kullanım",
+      "section3Text": "Stopwatch Skull uygulaması, herhangi bir veri işleme, depolama veya paylaşım işlemi yapmamaktadır. Tüm işlemler geçici olarak cihaz belleğinde tutulur ve işlem tamamlandıktan sonra silinir.",
+      "section4Title": "4. Veri Güvenliği",
+      "section4Text": "Kişisel veri toplanmaması nedeniyle, veri güvenliği konusundaki riskler minimum düzeydedir. Uygulama, sadece cihazınız üzerinde çalıştığı için dışarıya veri sızdırma gibi bir durum söz konusu değildir.",
+      "section5Title": "5. Bize Ulaşın",
+      "section5Text": "Stopwatch Skull ile ilgili soru, görüş veya önerileriniz için lütfen aşağıdaki e-posta adresinden bize ulaşın:",
+      "section5ListItem1": "<0>E-posta:</0> <1>{{contactEmail}}</1>",
+      "finalText": "Stopwatch Skull uygulamasını kullanarak, bu gizlilik politikasını okuduğunuzu ve anladığınızı kabul etmiş olursunuz.",
+      "contactEmail": "hckapplications@gmail.com"
+    }
+  }
+  
