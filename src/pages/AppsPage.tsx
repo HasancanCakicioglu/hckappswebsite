@@ -56,6 +56,19 @@ const appsData = [
       { type: "google", url: "https://play.google.com/store/apps/details?id=com.hck.phototranslator", buttonTextKey: "apps.downloadgoogle", bgColor: "bg-[#00df9a]", hoverBgColor: "hover:bg-[#00c87b]" },
     ],
   },
+  {
+    id: "stopwatch",
+    name: "Stopwatch",
+    logo: "/apps/stopwatch/stopwatch_logo.png",
+    titleColor: "text-[#FF6F00]",
+    descriptionKey: "apps.ssection1",
+    features: [
+      { image: "/apps/stopwatch/home_framed.png", titleKey: "apps.stitle1", descKey: "apps.sdesc1" },
+      { image: "/apps/stopwatch/lap_framed.png", titleKey: "apps.stitle2", descKey: "apps.sdesc2" },
+      { image: "/apps/stopwatch/settings_framed.png", titleKey: "apps.stitle3", descKey: "apps.sdesc3" },
+    ],
+    stores: [] // Add store links if available
+  },
 ];
 
 

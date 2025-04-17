@@ -10,9 +10,10 @@
         "helpcenter": "Help Center",
         "contact": "Contact",
         "aboutme": "About Me",
-        "privacypolicyvoidnote": "Privacy Policy (VoidNote)",
-        "privacypolicycrypobex": "Privacy Policy (Cryptobex)",
-        "privacypolicyphototranslator": "Privacy Policy (Photo Translator)"
+        "privacypolicyvoidnote": "VoidNote",
+        "privacypolicycrypobex": "Cryptobex",
+        "privacypolicyphototranslator": "Photo Translator",
+        "privacypolicystopwatch": "Stopwatch"
         
     }
 }

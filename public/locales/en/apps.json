@@ -30,7 +30,15 @@
         "pdesc3": "Accurately translate recognized text into a wide range of languages, ensuring you stay connected no matter where you are.",
         "ptitle1": "Camera & Gallery Translation",
         "ptitle2": "Travel & Foreign Sign Translation",
-        "ptitle3": "Multi-Language Support"
+        "ptitle3": "Multi-Language Support",
+
+        "ssection1": "Stopwatch is a versatile and user-friendly mobile application designed to help you track time efficiently. With its intuitive interface and customizable features, it caters to all your timing needs.",
+        "sdesc1": "Start, pause, and reset the stopwatch with a single tap.",
+        "sdesc2": "Customize lap times and save them for future reference.",
+        "sdesc3": "Adjust the display settings to suit your preferences.",
+        "stitle1": "Start/Stop",
+        "stitle2": "Lap Times",
+        "stitle3": "Display Settings"
 
 
     }

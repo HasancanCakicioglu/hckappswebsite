@@ -74,6 +74,7 @@ const Footer = () => {
               <li className='py-1 text-sm'><Link to={"/privacy-policy"}>{t('footer.privacypolicyvoidnote')}</Link></li>
               <li className='py-1 text-sm'><Link to={"/privacy-policy-cryptobex"}>{t('footer.privacypolicycrypobex')}</Link></li>
               <li className='py-1 text-sm'><Link to={"/privacy-policy-phototranslator"}>{t('footer.privacypolicyphototranslator')}</Link></li>
+              <li className='py-1 text-sm'><Link to={"/privacy-policy-stopwatchskull"}>{t('footer.privacypolicystopwatch')}</Link></li>
             </ul>
           </div>
         </div>

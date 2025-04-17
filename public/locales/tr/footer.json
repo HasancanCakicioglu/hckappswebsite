@@ -10,8 +10,9 @@
     "helpcenter": "Yardım Merkezi",
     "contact": "İletişim",
     "aboutme": "Hakkımda",
-    "privacypolicyvoidnote": "Gizlilik Politikası (VoidNote)",
-    "privacypolicycrypobex": "Gizlilik Politikası (Cryptobex)",
-    "privacypolicyphototranslator": "Gizlilik Politikası (Photo Translator)"
+    "privacypolicyvoidnote": "VoidNote",
+    "privacypolicycrypobex": "Cryptobex",
+    "privacypolicyphototranslator": "Photo Translator",
+    "privacypolicystopwatch": "Kronometre"
   }
 }
