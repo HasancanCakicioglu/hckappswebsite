@@ -67,7 +67,10 @@ const appsData = [
       { image: "/apps/stopwatch/lap_framed.png", titleKey: "apps.stitle2", descKey: "apps.sdesc2" },
       { image: "/apps/stopwatch/settings_framed.png", titleKey: "apps.stitle3", descKey: "apps.sdesc3" },
     ],
-    stores: [] // Add store links if available
+    stores: [
+      { type: "google", url: "https://play.google.com/store/apps/details?id=com.hck.stopwatch&pcampaignid=web_share", buttonTextKey: "apps.downloadgoogle", bgColor: "bg-[#00df9a]", hoverBgColor: "hover:bg-[#00c87b]" },
+      { type: "apple", url: "https://apps.apple.com/tr/app/stopwatch-skull-timer/id6744737324?platform=iphone", buttonTextKey: "apps.downloadapple", bgColor: "bg-[#000000]", hoverBgColor: "hover:bg-[#333333]" },
+    ],
   },
 ];
 
