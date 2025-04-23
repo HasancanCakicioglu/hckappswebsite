@@ -13,6 +13,7 @@ import './i18n.ts';
 import PrivacyPolicyCryptobex from './pages/PrivacyPolicyCryptobex.tsx';
 import PrivacyPolicyPhotoTranslator from './pages/PrivacyPolicyPhotoTranslator.tsx';
 import PrivacyPolicyStopwatchSkull from './pages/PrivacyPolicyStopwatch.tsx';
+import PrivacyPolicyTapTapUp from './pages/PrivacyPolicyTapTapUp.tsx';
 
 
 const router = createBrowserRouter([
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
   {
     "path": "/privacy-policy-stopwatchskull",
     "element": <Layout><PrivacyPolicyStopwatchSkull /></Layout>
+  },
+  {
+    "path": "/privacy-policy-taptapup",
+    "element": <Layout><PrivacyPolicyTapTapUp /></Layout>
   },
   {
     "path": "*",

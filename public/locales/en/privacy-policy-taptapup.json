@@ -1,0 +1,21 @@
+{
+    "tapTapUp": {
+      "contactEmail": "hckapplications@gmail.com",
+      "title": "Privacy Policy",
+      "effectiveDateLabel": "Effective Date: ",
+      "effectiveDate": "June 1, 2025",
+      "section1Title": "1. Introduction",
+      "section1Text": "TapTapUp is a simple game that does not collect any personal data from its players.",
+      "section2Title": "2. Data We Don’t Collect",
+      "section2Text": "We do not collect names, email addresses, location data, or any other personal information.",
+      "section3Title": "3. Data Processing and Usage",
+      "section3Text": "Since we do not collect any data, there is no processing, storage, or sharing of user information.",
+      "section4Title": "4. Data Security",
+      "section4Text": "There is no user data to secure. TapTapUp does not transmit or store any personal information.",
+      "section5Title": "5. Contact Us",
+      "section5Text": "If you have any questions about this policy, please reach out to us at:",
+      "section5ListItem1": "<0>Contact:</0> <1>{{contactEmail}}</1>",
+      "finalText": "Thank you for playing TapTapUp. Enjoy the game!"
+    }
+  }
+  

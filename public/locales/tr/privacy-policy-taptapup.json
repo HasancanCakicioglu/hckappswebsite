@@ -1,0 +1,21 @@
+{
+    "tapTapUp": {
+      "contactEmail": "hckapplications@gmail.com",
+      "title": "Gizlilik Politikası",
+      "effectiveDateLabel": "Yürürlük Tarihi: ",
+      "effectiveDate": "1 Haziran 2025",
+      "section1Title": "1. Giriş",
+      "section1Text": "TapTapUp, oyuncularından hiçbir kişisel veri toplamaz.",
+      "section2Title": "2. Toplanmayan Veriler",
+      "section2Text": "İsim, e-posta adresi, konum verisi veya başka herhangi bir kişisel bilgi toplamıyoruz.",
+      "section3Title": "3. Veri İşleme ve Kullanım",
+      "section3Text": "Hiçbir veri toplamadığımız için kullanıcı bilgisi işleme, depolama veya paylaşımı yapılmamaktadır.",
+      "section4Title": "4. Veri Güvenliği",
+      "section4Text": "Güvenliğe alınacak kullanıcı verisi yoktur. TapTapUp hiçbir kişisel bilgiyi iletmez veya depolamaz.",
+      "section5Title": "5. Bize Ulaşın",
+      "section5Text": "Bu politika ile ilgili sorularınız için lütfen bize şu adresten ulaşın:",
+      "section5ListItem1": "<0>İletişim:</0> <1>{{contactEmail}}</1>",
+      "finalText": "TapTapUp’u oynadığınız için teşekkürler. Oyunun keyfini çıkarın!"
+    }
+  }
+  
