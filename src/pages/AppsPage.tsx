@@ -72,6 +72,25 @@ const appsData = [
       { type: "apple", url: "https://apps.apple.com/tr/app/stopwatch-skull-timer/id6744737324?platform=iphone", buttonTextKey: "apps.downloadapple", bgColor: "bg-[#000000]", hoverBgColor: "hover:bg-[#333333]" },
     ],
   },
+  {
+    id: "taptapup",
+    name: "TapTapUp",
+    logo: "/apps/taptapup/taptapup_logo.png",
+    titleColor: "text-[#4A90E2]",
+    descriptionKey: "apps.tsection1",
+    features: [
+      { image: "/apps/taptapup/blue_framed.png",  titleKey: "apps.ttitle1", descKey: "apps.tdesc1" },
+      { image: "/apps/taptapup/green_framed.png", titleKey: "apps.ttitle2", descKey: "apps.tdesc2" },
+      { image: "/apps/taptapup/red_framed.png",   titleKey: "apps.ttitle3", descKey: "apps.tdesc3" },
+      { image: "/apps/taptapup/yellow_framed.png",titleKey: "apps.ttitle4", descKey: "apps.tdesc4" },
+      { image: "/apps/taptapup/pink_framed.png",  titleKey: "apps.ttitle5", descKey: "apps.tdesc5" },
+    ],
+    stores: [
+      { type: "google", url: "https://play.google.com/store/apps/details?id=com.hck.taptapup&pcampaignid=web_share", buttonTextKey: "apps.downloadgoogle", bgColor: "bg-[#4A90E2]", hoverBgColor: "hover:bg-[#3B7DC1]" },
+      { type: "apple",  url: "https://apps.apple.com/tr/app/taptapup-reflex-run/id6744987786?platform=iphone",   buttonTextKey: "apps.downloadapple",  bgColor: "bg-[#000000]",       hoverBgColor: "hover:bg-[#333333]" },
+    ],
+  },
+
 ];
 
 
