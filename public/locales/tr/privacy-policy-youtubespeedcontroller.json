@@ -1,0 +1,20 @@
+{
+    "youtubeSpeedControl": {
+      "title": "YouTube Hız Kontrolü Gizlilik Politikası",
+      "intro": "Gizliliğiniz önemlidir. Bu uzantı YouTube oynatma hızını özelleştirir ve yalnızca seçtiğiniz hızı yerel depolamada saklar.",
+      "dataCollectedTitle": "Topladığımız Veriler",
+      "dataCollected": "Sadece seçtiğiniz oynatma hızının sayısal değerini (örn. 1.25) tarayıcınızın yerel depolamasında saklıyoruz. Kişisel veya hassas veri toplanmaz.",
+      "permissionsTitle": "Kullanılan İzinler",
+      "permission": {
+        "storage": "storage: seçtiğiniz oynatma hızını kaydetmek ve geri yüklemek için.",
+        "scripting": "scripting: YouTube sayfalarına hız kontrol betiğini eklemek veya güncellemek için.",
+        "activeTab": "activeTab: uzantıyla etkileşimde bulunduğunuzda o anki YouTube sekmesine erişmek için.",
+        "tabs": "tabs: sayfa gezinimini algılamak ve kaydedilen hızı yeniden uygulamak için.",
+        "host": "host (https://*.youtube.com/*): betiğin yalnızca YouTube alan adlarında çalışması için."
+      },
+      "thirdPartyTitle": "Üçüncü Taraf Servisleri",
+      "thirdParty": "Bu uzantı üçüncü taraf analiz veya reklam hizmetleri kullanmaz.",
+      "changesTitle": "Politika Değişiklikleri",
+      "changes": "Bu politikayı güncelleyebiliriz. Değişiklikler burada görünecek ve yayınlanır yayınlanmaz yürürlüğe girecektir."
+    }
+  }

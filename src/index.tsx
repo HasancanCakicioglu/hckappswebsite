@@ -14,6 +14,7 @@ import PrivacyPolicyCryptobex from './pages/PrivacyPolicyCryptobex.tsx';
 import PrivacyPolicyPhotoTranslator from './pages/PrivacyPolicyPhotoTranslator.tsx';
 import PrivacyPolicyStopwatchSkull from './pages/PrivacyPolicyStopwatch.tsx';
 import PrivacyPolicyTapTapUp from './pages/PrivacyPolicyTapTapUp.tsx';
+import YoutubeSpeedControllerPrivacyPolicy from './pages/privacy-policy/YoutubeSpeedController.tsx';
 
 
 const router = createBrowserRouter([
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
   {
     "path": "/privacy-policy-taptapup",
     "element": <Layout><PrivacyPolicyTapTapUp /></Layout>
+  },
+  {
+    "path": "/privacy-policy-youtubespeedcontroller",
+    "element": <Layout><YoutubeSpeedControllerPrivacyPolicy /></Layout>
   },
   {
     "path": "*",

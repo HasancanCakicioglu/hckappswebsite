@@ -1,0 +1,20 @@
+{
+    "youtubeSpeedControl": {
+      "title": "YouTube Speed Control Privacy Policy",
+      "intro": "Your privacy matters. This extension customizes YouTube playback speed and only stores your chosen speed locally to function.",
+      "dataCollectedTitle": "Data We Collect",
+      "dataCollected": "We store only the numeric playback speed value you select (e.g., 1.25) in your browser's local storage. No personal or sensitive data is collected or transmitted.",
+      "permissionsTitle": "Permissions Used",
+      "permission": {
+        "storage": "storage: to save and restore your selected playback speed.",
+        "scripting": "scripting: to inject or update the speed-control script on YouTube pages.",
+        "activeTab": "activeTab: to access the current YouTube tab when you interact with the extension.",
+        "tabs": "tabs: to detect page navigation and reapply your saved speed.",
+        "host": "host (https://*.youtube.com/*): to run scripts only on YouTube domains."
+      },
+      "thirdPartyTitle": "Third-Party Services",
+      "thirdParty": "This extension does not use any third-party analytics or advertising services.",
+      "changesTitle": "Policy Changes",
+      "changes": "We may update this policy. Changes will appear here and take effect immediately upon posting."
+    }
+  }
