@@ -1,0 +1,21 @@
+{
+    
+      "youtubeVideoBookMaker": {
+        "title": "Gizlilik Politikası",
+        "intro": "Bu Gizlilik Politikası, YouTube Video BookMaker uzantısının bilgilerinizi nasıl topladığını, kullandığını ve koruduğunu açıklar.",
+        "dataCollectedTitle": "Toplanan Veriler",
+        "dataCollected": "Yalnızca uzantı içinde oluşturduğunuz yer imlerini ve isteğe bağlı notları kaydederiz. Kişisel veri (ör. isim, e-posta) toplanmaz veya iletilmez.",
+        "permissionsTitle": "Gerekli İzinler",
+        "permissions": {
+          "storage": "Yer imlerinizi ve notlarınızı yerel olarak kaydetmek için tarayıcı depolamasına erişim.",
+          "activeTab": "Zaman damgalarını yakalamak için aktif YouTube sekmesinin bilgilerini okumak.",
+          "tabs": "Yer imleme için YouTube video sekmelerinin URL’sini almak.",
+          "scripting": "Yer imi alma işlevini etkinleştirmek için YouTube sayfalarına betik enjekte etmek."
+        },
+        "thirdPartyTitle": "Üçüncü Taraf Hizmetleri",
+        "thirdParty": "Bu uzantı herhangi bir üçüncü taraf analiz veya takip hizmeti kullanmaz.",
+        "changesTitle": "Politika Değişiklikleri",
+        "changes": "Geliştirmeleri yansıtmak için bu Gizlilik Politikasını güncelleyebiliriz. Güncellenen politikalar burada ve uzantı güncellemeleriyle yayınlanacaktır."
+      }
+    
+  }

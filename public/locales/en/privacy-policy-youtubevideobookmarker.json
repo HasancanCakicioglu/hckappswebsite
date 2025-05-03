@@ -1,0 +1,21 @@
+{
+    
+      "youtubeVideoBookMaker": {
+        "title": "Privacy Policy",
+        "intro": "This Privacy Policy explains how the YouTube Video BookMaker extension collects, uses, and protects your information.",
+        "dataCollectedTitle": "Data Collected",
+        "dataCollected": "We only store bookmarks and optional notes you create within the extension. No personal data (e.g., name, email) is collected or transmitted.",
+        "permissionsTitle": "Permissions Required",
+        "permissions": {
+          "storage": "Access to browser storage to save your bookmarks and notes locally.",
+          "activeTab": "Read information about the active YouTube tab to capture timestamps.",
+          "tabs": "Retrieve the URL of YouTube video tabs for bookmarking.",
+          "scripting": "Inject scripts into YouTube pages to enable bookmarking functionality."
+        },
+        "thirdPartyTitle": "Third-Party Services",
+        "thirdParty": "This extension does not use any third-party analytics or tracking services.",
+        "changesTitle": "Changes to This Policy",
+        "changes": "We may update this Privacy Policy to reflect improvements. Updated policies will be published here and through extension updates."
+      }
+    
+  }

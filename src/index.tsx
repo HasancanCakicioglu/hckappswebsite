@@ -15,6 +15,7 @@ import PrivacyPolicyPhotoTranslator from './pages/PrivacyPolicyPhotoTranslator.t
 import PrivacyPolicyStopwatchSkull from './pages/PrivacyPolicyStopwatch.tsx';
 import PrivacyPolicyTapTapUp from './pages/PrivacyPolicyTapTapUp.tsx';
 import YoutubeSpeedControllerPrivacyPolicy from './pages/privacy-policy/YoutubeSpeedController.tsx';
+import YoutubeBookmarkerPrivacyPolicy from './pages/privacy-policy/YoutubeBookMaker.tsx';
 
 
 const router = createBrowserRouter([
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
   {
     "path": "/privacy-policy-youtubespeedcontroller",
     "element": <Layout><YoutubeSpeedControllerPrivacyPolicy /></Layout>
+  },
+  {
+    "path": "/privacy-policy-youtubebookmarker",
+    "element": <Layout><YoutubeBookmarkerPrivacyPolicy /></Layout>
   },
   {
     "path": "*",
