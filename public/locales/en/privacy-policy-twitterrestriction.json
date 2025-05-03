@@ -1,0 +1,28 @@
+{
+    "twitterRestriction": {
+      "title": "Twitter Restriction Privacy Policy",
+      "intro": "Twitter Restriction is a browser extension designed to hide tweets from specified users and tweets containing certain keywords. This privacy policy explains how we handle your information when you use our extension.",
+      
+      "dataCollectedTitle": "Data Collection and Usage",
+      "dataCollected": "Twitter Restriction does not collect any personal information. All settings you configure (restricted usernames and keywords) are stored locally on your device using Chrome storage API and are not transmitted to any external servers.",
+      
+      "permissionsTitle": "Browser Permissions",
+      "permissions": {
+        "storage": "storage: Required to save your list of restricted usernames and keywords.",
+        "activeTab": "activeTab: Required to interact with the current Twitter tab you are viewing.",
+        "scripting": "scripting: Required to inject code that enables the extension to hide tweets based on your settings."
+      },
+      
+      "localStorageTitle": "Local Storage",
+      "localStorage": "Your settings (restricted usernames, keywords, and extension enable/disable status) are stored locally on your device using Chrome's storage API. This information is only used to apply your filtering preferences when you browse Twitter.",
+      
+      "thirdPartyTitle": "Third-Party Services",
+      "thirdParty": "Twitter Restriction does not use any third-party services, analytics, or tracking tools. We do not share any data with third parties.",
+      
+      "changesTitle": "Changes to Privacy Policy",
+      "changes": "We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes.",
+      
+      "contactTitle": "Contact Us",
+      "contact": "If you have any questions about our Privacy Policy, please contact us."
+    }
+  } 

@@ -1,0 +1,28 @@
+{
+    "twitterRestriction": {
+      "title": "Twitter Restriction Gizlilik Politikası",
+      "intro": "Twitter Restriction, belirtilen kullanıcılardan gelen tweetleri ve belirli anahtar kelimeler içeren tweetleri gizlemek için tasarlanmış bir tarayıcı eklentisidir. Bu gizlilik politikası, eklentimizi kullanırken bilgilerinizin nasıl işlendiğini açıklar.",
+      
+      "dataCollectedTitle": "Veri Toplama ve Kullanımı",
+      "dataCollected": "Twitter Restriction hiçbir kişisel bilgi toplamaz. Yapılandırdığınız tüm ayarlar (kısıtlanan kullanıcı adları ve anahtar kelimeler) Chrome depolama API'si kullanılarak cihazınızda yerel olarak saklanır ve herhangi bir harici sunucuya iletilmez.",
+      
+      "permissionsTitle": "Tarayıcı İzinleri",
+      "permissions": {
+        "storage": "storage: Kısıtlanan kullanıcı adları ve anahtar kelimeler listelerinizi kaydetmek için gereklidir.",
+        "activeTab": "activeTab: Görüntülediğiniz mevcut Twitter sekmesi ile etkileşim kurmak için gereklidir.",
+        "scripting": "scripting: Eklentinin ayarlarınıza göre tweetleri gizlemesini sağlayan kodu enjekte etmek için gereklidir."
+      },
+      
+      "localStorageTitle": "Yerel Depolama",
+      "localStorage": "Ayarlarınız (kısıtlanan kullanıcı adları, anahtar kelimeler ve eklentiyi etkinleştirme/devre dışı bırakma durumu) Chrome'un depolama API'si kullanılarak cihazınızda yerel olarak saklanır. Bu bilgiler yalnızca Twitter'ı gezinirken filtreleme tercihlerinizi uygulamak için kullanılır.",
+      
+      "thirdPartyTitle": "Üçüncü Taraf Hizmetleri",
+      "thirdParty": "Twitter Restriction herhangi bir üçüncü taraf hizmeti, analiz veya izleme aracı kullanmaz. Herhangi bir veriyi üçüncü taraflarla paylaşmıyoruz.",
+      
+      "changesTitle": "Gizlilik Politikası Değişiklikleri",
+      "changes": "Gizlilik Politikamızı zaman zaman güncelleyebiliriz. Yeni Gizlilik Politikasını bu sayfada yayınlayarak sizi herhangi bir değişiklik hakkında bilgilendireceğiz. Herhangi bir değişiklik için bu Gizlilik Politikasını periyodik olarak gözden geçirmeniz tavsiye edilir.",
+      
+      "contactTitle": "Bize Ulaşın",
+      "contact": "Gizlilik Politikamız hakkında herhangi bir sorunuz varsa, lütfen bizimle iletişime geçin."
+    }
+  } 
