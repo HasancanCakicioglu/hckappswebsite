@@ -40,6 +40,14 @@ const Navbar = () => {
             {t('navbar.apps')}
           </Link>
         </li>
+        <li className='p-4'>
+          <Link 
+            to="/extensions" 
+            style={location.pathname === '/extensions' ? activeLinkStyle : {}}
+          >
+            {t('navbar.extensions')}
+          </Link>
+        </li>
         <li className='p-4 whitespace-nowrap'>
           <Link 
             to="/about-me" 
@@ -73,6 +81,7 @@ const Navbar = () => {
         {[
           { to: '/', label: t('navbar.home') },
           { to: '/apps', label: t('navbar.apps') },
+          { to: '/extensions', label: t('navbar.extensions') },
           { to: '/about-me', label: t('navbar.aboutme') },
           { to: '/contact', label: t('navbar.contact') },
         ].map((item, index) => (

@@ -2,6 +2,7 @@
     "navbar": {
         "home": "Home",
         "apps": "Apps",
+        "extensions": "Extensions",
         "aboutme": "About Me",
         "contact": "Contact"
     }

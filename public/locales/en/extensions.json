@@ -1,0 +1,19 @@
+{
+  "extensions": {
+    "title": "Chrome Extensions",
+    "subtitle": "Enhance your browsing experience with our collection of productivity-focused Chrome extensions.",
+    "get_extension": "Get Extension",
+    "siteblocker": {
+      "description": "Block distracting websites and improve your productivity. Simply add websites to your block list and stay focused on your tasks."
+    },
+    "twitterrestriction": {
+      "description": "Customize your Twitter experience by filtering out specific accounts and tweets containing keywords you want to avoid."
+    },
+    "youtubebookmark": {
+      "description": "Save and organize timestamps in YouTube videos for easy reference later. Perfect for educational content and tutorials."
+    },
+    "youtubespeedcontrol": {
+      "description": "Take control of YouTube video playback speed with more options than the standard player provides."
+    }
+  }
+} 

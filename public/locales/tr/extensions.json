@@ -1,0 +1,19 @@
+{
+  "extensions": {
+    "title": "Chrome Eklentileri",
+    "subtitle": "Üretkenlik odaklı Chrome eklentilerimiz ile tarama deneyiminizi geliştirin.",
+    "get_extension": "Eklentiyi Edin",
+    "siteblocker": {
+      "description": "Dikkat dağıtıcı web sitelerini engelleyin ve üretkenliğinizi artırın. Siteleri engelleme listenize ekleyin ve görevlerinize odaklanın."
+    },
+    "twitterrestriction": {
+      "description": "Belirli hesapları ve kaçınmak istediğiniz anahtar kelimeleri içeren tweetleri filtreleyerek Twitter deneyiminizi özelleştirin."
+    },
+    "youtubebookmark": {
+      "description": "YouTube videolarındaki zaman damgalarını daha sonra kolayca başvurmak için kaydedin ve düzenleyin. Eğitim içeriği ve öğretici videolar için mükemmel."
+    },
+    "youtubespeedcontrol": {
+      "description": "Standart oynatıcının sunduğundan daha fazla seçenekle YouTube video oynatma hızınızı kontrol edin."
+    }
+  }
+} 

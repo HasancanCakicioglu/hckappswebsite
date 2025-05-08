@@ -2,6 +2,7 @@
     "navbar": {
         "home": "Ana Sayfa",
         "apps": "Uygulamalar",
+        "extensions": "Eklentiler",
         "aboutme": "Hakkımda",
         "contact": "İletişim"
     }
