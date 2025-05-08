@@ -1,0 +1,23 @@
+{
+    "siteBlocker": {
+      "title": "Privacy Policy for Site Blocker",
+      "intro": "This Privacy Policy explains how the Site Blocker Chrome extension collects, uses, stores, and protects user-defined URL patterns to block websites.",
+      "dataCollectedTitle": "Data Collection",
+      "dataCollected": "Site Blocker does not collect any personally identifiable information. It stores only the URL patterns you specify to block sites.",
+      "permissionsTitle": "Permissions",
+      "permissions": {
+        "storage": "Access to Chrome Storage API for storing your URL patterns locally.",
+        "activeTab": "Access to the active tab to determine which URL to block.",
+        "scripting": "Use of Chrome Scripting API to inject blocking scripts on web pages."
+      },
+      "localStorageTitle": "Local Storage",
+      "localStorage": "All data is stored locally on your device using Chrome Storage Sync or Local, and is not shared externally.",
+      "thirdPartyTitle": "Third-Party Services",
+      "thirdParty": "Site Blocker does not use or call any third-party services or analytics.",
+      "changesTitle": "Changes to This Policy",
+      "changes": "We may update this policy from time to time. We will notify you of any changes via the extension update and update the effective date below.",
+      "contactTitle": "Contact Us",
+      "contact": "If you have any questions about this policy, please contact us at hckapplications@gmail.com."
+    }
+  }
+  

@@ -1,0 +1,23 @@
+{
+    "siteBlocker": {
+      "title": "Site Blocker Gizlilik Politikası",
+      "intro": "Bu Gizlilik Politikası, Site Blocker Chrome uzantısının kullanıcı tarafından tanımlanan URL kalıplarını web sitelerini engellemek için nasıl topladığı, kullandığı, sakladığı ve koruduğunu açıklar.",
+      "dataCollectedTitle": "Veri Toplama",
+      "dataCollected": "Site Blocker kişisel olarak tanımlanabilir herhangi bir bilgi toplamaz. Yalnızca engellemek için belirttiğiniz URL kalıplarını depolar.",
+      "permissionsTitle": "İzinler",
+      "permissions": {
+        "storage": "URL kalıplarınızı yerel olarak depolamak için Chrome Storage API erişimi.",
+        "activeTab": "Hangi URL'nin engelleneceğini belirlemek için etkin sekmeye erişim.",
+        "scripting": "Web sayfalarına engelleme betikleri eklemek için Chrome Scripting API kullanımı."
+      },
+      "localStorageTitle": "Yerel Depolama",
+      "localStorage": "Tüm veriler, ayarlarınıza göre Chrome Storage Sync veya Local kullanılarak cihazınızda yerel olarak saklanır ve dışarıyla paylaşılmaz.",
+      "thirdPartyTitle": "Üçüncü Taraf Hizmetleri",
+      "thirdParty": "Site Blocker hiçbir üçüncü taraf hizmeti veya analiz hizmeti kullanmaz.",
+      "changesTitle": "Bu Politika Hakkında Değişiklikler",
+      "changes": "Bu politikayı zaman zaman güncelleyebiliriz. Herhangi bir değişiklik olduğunda uzantı güncellemesiyle sizi bilgilendirecek ve yürürlük tarihini güncelleyeceğiz.",
+      "contactTitle": "İletişim",
+      "contact": "Bu politika hakkında sorularınız varsa, lütfen hckapplications@gmail.com adresinden bize ulaşın."
+    }
+  }
+  
