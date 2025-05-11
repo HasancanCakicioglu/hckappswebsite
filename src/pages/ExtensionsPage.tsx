@@ -19,7 +19,7 @@ const ExtensionsPage = () => {
         description: "extensions.twitterrestriction.description",
       },
     {
-      id: "siteblocker",
+      id: "site-blocker/ggkdfmmjcgppamcmlepgjmhemhjaclpc",
       name: "Site Blocker",
       logo: "/apps/extensions/siteblocker.png",
       description: "extensions.siteblocker.description",
