@@ -40,7 +40,7 @@ const ExtensionsPage = () => {
       name: "Recent Files Navigator",
       logo: "/apps/extensions/lastrecent.png",
       description: "extensions.recentfilesnavigator.description",
-      link: null,
+      link: "https://marketplace.visualstudio.com/items?itemName=hck-apps.recent-files-navigator&ssr=false#overview",
     },
   ];
 

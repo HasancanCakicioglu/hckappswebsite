@@ -143,7 +143,7 @@ const Hero = () => { // TypeScript için FC tipi eklendi (opsiyonel)
               {/* Extensions (same style as apps, no white bg) */}
               {/* VS Code Extension */}
               <a
-                href="/extensions#vscode"
+                href="https://marketplace.visualstudio.com/items?itemName=hck-apps.recent-files-navigator&ssr=false#overview"
                 className="flex flex-col items-center w-28 text-center mx-3 transition-transform duration-200 ease-in-out transform hover:scale-110"
               >
                 <img
