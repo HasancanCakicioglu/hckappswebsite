@@ -112,6 +112,87 @@ const Hero = () => { // TypeScript için FC tipi eklendi (opsiyonel)
                 </p>
               </Link>
 
+              {/* Websites (same style as apps, no white bg) */}
+              <a
+                href="https://hckapps.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center w-24 text-center mx-3 transition-transform duration-200 ease-in-out transform hover:scale-110"
+              >
+                <img
+                  src="/favicon.ico"
+                  alt="HCK Apps"
+                  className="w-16 h-16 mb-2 border-2 border-white rounded-lg p-2 object-contain"
+                />
+                <p className="text-white mt-1 font-bold text-xs break-words">HCK Apps</p>
+              </a>
+              <a
+                href="https://tooldone.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center w-24 text-center mx-3 transition-transform duration-200 ease-in-out transform hover:scale-110"
+              >
+                <img
+                  src="/apps/tooldone/icon0.svg"
+                  alt="ToolDone"
+                  className="w-16 h-16 mb-2 border-2 border-white rounded-lg p-2 object-contain"
+                />
+                <p className="text-white mt-1 font-bold text-xs break-words">ToolDone</p>
+              </a>
+
+              {/* Extensions (same style as apps, no white bg) */}
+              <a
+                href="https://chrome.google.com/webstore/detail/youtube-speed-control/ahdgibfoljhcbmklbfgmcdjkenedponk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center w-28 text-center mx-3 transition-transform duration-200 ease-in-out transform hover:scale-110"
+              >
+                <img
+                  src="/apps/extensions/youtubespeedcontrol.png"
+                  alt="YouTube Speed Control"
+                  className="w-16 h-16 mb-2 border-2 border-white rounded-lg p-2 object-contain"
+                />
+                <p className="text-white mt-1 font-bold text-xs break-words">YouTube Speed Control</p>
+              </a>
+              <a
+                href="https://chrome.google.com/webstore/detail/twitter-restriction/hhdlhabdmcnnngfkhkdpkhphfpcdpooo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center w-28 text-center mx-3 transition-transform duration-200 ease-in-out transform hover:scale-110"
+              >
+                <img
+                  src="/apps/extensions/twitterrestriction.png"
+                  alt="Twitter Restriction"
+                  className="w-16 h-16 mb-2 border-2 border-white rounded-lg p-2 object-contain"
+                />
+                <p className="text-white mt-1 font-bold text-xs break-words">Twitter Restriction</p>
+              </a>
+              <a
+                href="https://chrome.google.com/webstore/detail/site-blocker/ggkdfmmjcgppamcmlepgjmhemhjaclpc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center w-28 text-center mx-3 transition-transform duration-200 ease-in-out transform hover:scale-110"
+              >
+                <img
+                  src="/apps/extensions/siteblocker.png"
+                  alt="Site Blocker"
+                  className="w-16 h-16 mb-2 border-2 border-white rounded-lg p-2 object-contain"
+                />
+                <p className="text-white mt-1 font-bold text-xs break-words">Site Blocker</p>
+              </a>
+              <a
+                href="https://chrome.google.com/webstore/detail/youtube-video-bookmarker/ddkbeekkfgcfamfgokkadnjfffimbdmf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center w-28 text-center mx-3 transition-transform duration-200 ease-in-out transform hover:scale-110"
+              >
+                <img
+                  src="/apps/extensions/youtubebookmark.png"
+                  alt="YouTube Video Bookmarker"
+                  className="w-16 h-16 mb-2 border-2 border-white rounded-lg p-2 object-contain"
+                />
+                <p className="text-white mt-1 font-bold text-xs break-words">YouTube Video Bookmarker</p>
+              </a>
               {/* Buraya başka uygulama linkleri eklenebilir */}
 
             </div>

@@ -19,6 +19,7 @@ import YoutubeBookmarkerPrivacyPolicy from './pages/privacy-policy/YoutubeBookMa
 import TwitterRestrictionPrivacyPolicy from './pages/privacy-policy/TwitterRestriction.tsx';
 import SiteBlockerPrivacyPolicy from './pages/privacy-policy/SiteBlocker.tsx';
 import ExtensionsPage from './pages/ExtensionsPage.tsx';
+import WebsitesPage from './pages/WebsitesPage.tsx';
 
 
 const router = createBrowserRouter([
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
   {
     "path": "/extensions",
     "element": <Layout><ExtensionsPage /></Layout>
+  },
+  {
+    "path": "/websites",
+    "element": <Layout><WebsitesPage /></Layout>
   },
   {
     "path": "/privacy-policy",

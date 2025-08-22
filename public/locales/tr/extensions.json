@@ -3,6 +3,9 @@
     "title": "Chrome Eklentileri",
     "subtitle": "Üretkenlik odaklı Chrome eklentilerimiz ile tarama deneyiminizi geliştirin.",
     "get_extension": "Eklentiyi Edin",
+    "view_on_marketplace": "Marketplace'te Görüntüle",
+    "vscode_title": "VS Code Eklentileri",
+    "vscode_subtitle": "Kodlama akışınızı hızlandıran Visual Studio Code eklentilerimiz.",
     "siteblocker": {
       "description": "Dikkat dağıtıcı web sitelerini engelleyin ve üretkenliğinizi artırın. Siteleri engelleme listenize ekleyin ve görevlerinize odaklanın."
     },
@@ -14,6 +17,9 @@
     },
     "youtubespeedcontrol": {
       "description": "Standart oynatıcının sunduğundan daha fazla seçenekle YouTube video oynatma hızınızı kontrol edin."
+    },
+    "recentfilesnavigator": {
+      "description": "VS Code içinde son açtığınız dosyaları akıllı bir liste halinde gösterir. Tek tıkla en son çalıştığınız dosyalara geri dönerek projede dolaşımı hızlandırır. Arama çubuğu, sabitleme ve grup bazlı filtreleme ile üretkenliği artırır."
     }
   }
 } 

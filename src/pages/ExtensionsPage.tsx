@@ -33,6 +33,17 @@ const ExtensionsPage = () => {
     
   ];
 
+  // VS Code eklentileri
+  const vscodeExtensions = [
+    {
+      id: "recent-files-navigator",
+      name: "Recent Files Navigator",
+      logo: "/apps/extensions/lastrecent.png",
+      description: "extensions.recentfilesnavigator.description",
+      link: null,
+    },
+  ];
+
   return (
     <div className="w-full min-h-screen bg-black py-16 px-4">
       <div className="max-w-6xl mx-auto">
@@ -98,6 +109,77 @@ const ExtensionsPage = () => {
                   >
                     {t("extensions.get_extension")}
                   </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* VS Code Extensions Section */}
+        <h2 className="text-3xl font-bold text-[#00df9a] text-center mt-20 mb-6">
+          {t("extensions.vscode_title")}
+        </h2>
+        <p className="text-white text-center text-lg mb-10 max-w-3xl mx-auto">
+          {t("extensions.vscode_subtitle")}
+        </p>
+
+        <div className="grid grid-cols-1 gap-6 max-w-5xl mx-auto">
+          {vscodeExtensions.map((extension) => (
+            <div
+              key={extension.id}
+              className="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-[#00df9a] transition-all duration-300"
+            >
+              <div className="md:hidden">
+                <div className="flex items-center mb-4">
+                  <img
+                    src={extension.logo}
+                    alt={extension.name}
+                    className="w-16 h-16 mr-4 rounded object-contain bg-white p-1"
+                  />
+                  <h3 className="text-2xl font-bold text-white">{extension.name}</h3>
+                </div>
+                <p className="text-gray-300 mb-6">
+                  {t(extension.description)}
+                </p>
+                {extension.link && (
+                  <div>
+                    <a
+                      href={extension.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block bg-[#00df9a] hover:bg-[#00c87b] text-black font-bold py-2 px-4 rounded-md transition-colors duration-200 text-center w-full"
+                    >
+                      {t("extensions.view_on_marketplace")}
+                    </a>
+                  </div>
+                )}
+              </div>
+
+              <div className="hidden md:grid md:grid-cols-12 md:gap-4 md:items-center">
+                <div className="md:col-span-1">
+                  <img
+                    src={extension.logo}
+                    alt={extension.name}
+                    className="w-16 h-16 rounded object-contain bg-white p-1"
+                  />
+                </div>
+                <h3 className="text-2xl font-bold text-white md:col-span-3">
+                  {extension.name}
+                </h3>
+                <p className="text-gray-300 md:col-span-6">
+                  {t(extension.description)}
+                </p>
+                <div className="md:col-span-2">
+                  {extension.link && (
+                    <a
+                      href={extension.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block bg-[#00df9a] hover:bg-[#00c87b] text-black font-bold py-2 px-4 rounded-md transition-colors duration-200 text-center w-full"
+                    >
+                      {t("extensions.view_on_marketplace")}
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

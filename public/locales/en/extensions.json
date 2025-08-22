@@ -3,6 +3,9 @@
     "title": "Chrome Extensions",
     "subtitle": "Enhance your browsing experience with our collection of productivity-focused Chrome extensions.",
     "get_extension": "Get Extension",
+    "view_on_marketplace": "View on Marketplace",
+    "vscode_title": "VS Code Extensions",
+    "vscode_subtitle": "Visual Studio Code extensions that speed up your coding flow.",
     "siteblocker": {
       "description": "Block distracting websites and improve your productivity. Simply add websites to your block list and stay focused on your tasks."
     },
@@ -14,6 +17,9 @@
     },
     "youtubespeedcontrol": {
       "description": "Take control of YouTube video playback speed with more options than the standard player provides."
+    },
+    "recentfilesnavigator": {
+      "description": "Shows your recently opened files in VS Code as a smart list. Jump back to what you were working on with a single click. Includes quick search, pinning, and group-based filtering to boost productivity."
     }
   }
 } 
