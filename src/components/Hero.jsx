@@ -141,6 +141,18 @@ const Hero = () => { // TypeScript için FC tipi eklendi (opsiyonel)
               </a>
 
               {/* Extensions (same style as apps, no white bg) */}
+              {/* VS Code Extension */}
+              <a
+                href="/extensions#vscode"
+                className="flex flex-col items-center w-28 text-center mx-3 transition-transform duration-200 ease-in-out transform hover:scale-110"
+              >
+                <img
+                  src="/apps/extensions/lastrecent.png"
+                  alt="Recent Files Navigator"
+                  className="w-16 h-16 mb-2 border-2 border-white rounded-lg p-2 object-contain"
+                />
+                <p className="text-white mt-1 font-bold text-xs break-words">Recent Files Navigator</p>
+              </a>
               <a
                 href="https://chrome.google.com/webstore/detail/youtube-speed-control/ahdgibfoljhcbmklbfgmcdjkenedponk"
                 target="_blank"

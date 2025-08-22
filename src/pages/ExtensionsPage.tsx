@@ -116,7 +116,7 @@ const ExtensionsPage = () => {
         </div>
 
         {/* VS Code Extensions Section */}
-        <h2 className="text-3xl font-bold text-[#00df9a] text-center mt-20 mb-6">
+        <h2 id="vscode" className="text-3xl font-bold text-[#00df9a] text-center mt-20 mb-6">
           {t("extensions.vscode_title")}
         </h2>
         <p className="text-white text-center text-lg mb-10 max-w-3xl mx-auto">
