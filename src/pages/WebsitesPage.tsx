@@ -19,6 +19,13 @@ const WebsitesPage = () => {
       description: "examples.tooldone",
       logo: "/apps/tooldone/icon0.svg",
     },
+    {
+      id: "clickflag",
+      name: "ClickFlag",
+      url: "https://clickflag.com",
+      description: "examples.clickflag",
+      logo: "/apps/clickflag/clickflaglogo.ico",
+    },
   ];
 
   return (

@@ -8,7 +8,7 @@ const Hero = () => { // TypeScript için FC tipi eklendi (opsiyonel)
 
   return (
     <div className="text-white">
-      <div className="max-w-[800px] w-full min-h-[calc(100vh-96px)] mx-auto text-center flex flex-col justify-center px-4"> {/* Padding eklendi */}
+      <div className="max-w-[1000px] w-full min-h-[calc(100vh-96px)] mx-auto text-center flex flex-col justify-center px-8"> {/* Padding eklendi */}
         <p className="text-[#00df9a] font-bold py-2">
           {t('home.tagline', 'GROWING WITH DATA ANALYTICS')} {/* Fallback eklendi */}
         </p>
@@ -39,7 +39,7 @@ const Hero = () => { // TypeScript için FC tipi eklendi (opsiyonel)
             <hr className="border-t-2 border-white mb-6 md:mb-8 w-3/4 md:w-full mx-auto" /> {/* Alt margin ve genişlik ayarlandı */}
 
             {/* İkonların bulunduğu div */}
-            <div className="flex justify-center flex-wrap gap-y-4"> {/* flex-wrap ve gap-y eklendi */}
+            <div className="flex justify-center flex-wrap gap-y-6 gap-x-4"> {/* flex-wrap ve gap-y eklendi */}
 
               {/* Link 1 - Hedef URL güncellendi */}
               <Link
@@ -114,17 +114,17 @@ const Hero = () => { // TypeScript için FC tipi eklendi (opsiyonel)
 
               {/* Websites (same style as apps, no white bg) */}
               <a
-                href="https://hckapps.com"
+                href="https://clickflag.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-col items-center w-24 text-center mx-3 transition-transform duration-200 ease-in-out transform hover:scale-110"
               >
                 <img
-                  src="/favicon.ico"
-                  alt="HCK Apps"
+                  src="/apps/clickflag/clickflaglogo.ico"
+                  alt="ClickFlag"
                   className="w-16 h-16 mb-2 border-2 border-white rounded-lg p-2 object-contain"
                 />
-                <p className="text-white mt-1 font-bold text-xs break-words">HCK Apps</p>
+                <p className="text-white mt-1 font-bold text-xs break-words">ClickFlag</p>
               </a>
               <a
                 href="https://tooldone.com"
@@ -138,6 +138,19 @@ const Hero = () => { // TypeScript için FC tipi eklendi (opsiyonel)
                   className="w-16 h-16 mb-2 border-2 border-white rounded-lg p-2 object-contain"
                 />
                 <p className="text-white mt-1 font-bold text-xs break-words">ToolDone</p>
+              </a>
+              <a
+                href="https://hckapps.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center w-24 text-center mx-3 transition-transform duration-200 ease-in-out transform hover:scale-110"
+              >
+                <img
+                  src="/favicon.ico"
+                  alt="HCK Apps"
+                  className="w-16 h-16 mb-2 border-2 border-white rounded-lg p-2 object-contain"
+                />
+                <p className="text-white mt-1 font-bold text-xs break-words">HCK Apps</p>
               </a>
 
               {/* Extensions (same style as apps, no white bg) */}

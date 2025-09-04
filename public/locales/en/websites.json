@@ -4,7 +4,8 @@
   "visit": "Visit",
   "examples": {
     "hckapps": "Discover projects and tools in the HCK Apps ecosystem.",
-    "tooldone": "A productivity platform that brings all kinds of calculators together. Fast, minimal, and convenient calculation experience."
+    "tooldone": "A productivity platform that brings all kinds of calculators together. Fast, minimal, and convenient calculation experience.",
+    "clickflag": "A hobby project that ranks country flags by clicks worldwide. Explore the most popular flags with ClickFlag."
   }
 }
 
