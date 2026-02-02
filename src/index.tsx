@@ -18,6 +18,7 @@ import YoutubeSpeedControllerPrivacyPolicy from './pages/privacy-policy/YoutubeS
 import YoutubeBookmarkerPrivacyPolicy from './pages/privacy-policy/YoutubeBookMaker.tsx';
 import TwitterRestrictionPrivacyPolicy from './pages/privacy-policy/TwitterRestriction.tsx';
 import SiteBlockerPrivacyPolicy from './pages/privacy-policy/SiteBlocker.tsx';
+import PrivacyPolicyWeeChess from './pages/privacy-policy/PrivacyPolicyWeeChess.tsx';
 import ExtensionsPage from './pages/ExtensionsPage.tsx';
 import WebsitesPage from './pages/WebsitesPage.tsx';
 
@@ -83,6 +84,10 @@ const router = createBrowserRouter([
   {
     "path": "/privacy-policy-siteblocker",
     "element": <Layout><SiteBlockerPrivacyPolicy /></Layout>
+  },
+  {
+    "path": "/privacy-policy-weechess",
+    "element": <Layout><PrivacyPolicyWeeChess /></Layout>
   },
   {
     "path": "*",
