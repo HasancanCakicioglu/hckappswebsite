@@ -6,6 +6,8 @@
     "typedStrings": ["Kişisel Projeler", "İş Çözümleri", "Eğlence"],
     "description": "İhtiyaçlarınıza göre uyarlanmış mobil uygulamalarla günlük verimliliğinizi artırın.",
     "discoverApps": "Uygulamalara Göz Atın",
-    "voidNote": "VoidNote"
+    "voidNote": "VoidNote",
+    "weechess": "WeeChess",
+    "weechessAlt": "WeeChess Uygulama Logosu"
   }
 }

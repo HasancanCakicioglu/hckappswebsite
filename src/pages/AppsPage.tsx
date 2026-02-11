@@ -90,6 +90,20 @@ const appsData = [
       { type: "apple",  url: "https://apps.apple.com/tr/app/taptapup-reflex-run/id6744987786?platform=iphone",   buttonTextKey: "apps.downloadapple",  bgColor: "bg-[#000000]",       hoverBgColor: "hover:bg-[#333333]" },
     ],
   },
+  {
+    id: "weechess",
+    name: "WeeChess",
+    logo: "/apps/weechess/logo.png",
+    titleColor: "text-[#8B4513]",
+    descriptionKey: "apps.wsection1",
+    features: [
+      { image: "/apps/weechess/1-c.png", titleKey: "apps.wtitle1", descKey: "apps.wdesc1" },
+      { image: "/apps/weechess/2-c.png", titleKey: "apps.wtitle2", descKey: "apps.wdesc2" },
+      { image: "/apps/weechess/3-c.png", titleKey: "apps.wtitle3", descKey: "apps.wdesc3" },
+      { image: "/apps/weechess/4-c.png", titleKey: "apps.wtitle4", descKey: "apps.wdesc4" },
+      { image: "/apps/weechess/5-c.png", titleKey: "apps.wtitle5", descKey: "apps.wdesc5" },
+    ],
+  },
 
 ];
 

@@ -50,6 +50,17 @@
     "ttitle4": "Sarı Alan",
     "tdesc4": "Sarı bloklar daha hızlı düşer hızlı tepki ver!",
     "ttitle5": "Pembe Alan",
-    "tdesc5": "Pembe alanda hayatta kalmak için dikkatli ve doğru tıklamalar yap."
+    "tdesc5": "Pembe alanda hayatta kalmak için dikkatli ve doğru tıklamalar yap.",
+    "wsection1": "WeeChess, satranç becerilerinizi geliştirmek için tasarlanmış eğlenceli bir satranç puzzle uygulamasıdır. Mini puzzle'ları çözerek satranç bilginizi test edin, mat bulma, taktik ve strateji konularında kendinizi geliştirin.",
+    "wtitle1": "Puzzle Çözme",
+    "wdesc1": "Farklı zorluk seviyelerinde satranç puzzle'larını çözün. Mat bulma, taktik ve strateji puzzle'larıyla satranç bilginizi artırın ve kendinizi geliştirin.",
+    "wtitle2": "Renk Temaları",
+    "wdesc2": "Uygulamayı kişiselleştirin! Farklı renk temaları arasından seçim yaparak satranç puzzle çözme deneyiminizi kendi zevkinize göre özelleştirin.",
+    "wtitle3": "Zorlu Puzzlelar",
+    "wdesc3": "Kendinizi zorlayın! Zorlu puzzle'larla satranç becerilerinizi test edin ve her çözümle birlikte kendinizi daha da geliştirin.",
+    "wtitle4": "Puzzle Kategorileri",
+    "wdesc4": "Farklı kategorilerde puzzle çözün. Mat bulma, taktik, strateji ve daha fazlasıyla satranç bilginizi genişletin.",
+    "wtitle5": "Gelişim ve İlerleme",
+    "wdesc5": "Çözdüğünüz puzzle'larla satranç becerilerinizi takip edin. Her puzzle çözümüyle birlikte kendinizi geliştirin ve satranç yolculuğunuza devam edin."
   }
 }

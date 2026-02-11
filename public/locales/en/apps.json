@@ -50,6 +50,17 @@
     "ttitle4": "Yellow Zone",
     "tdesc4": "Yellow blocks drop faster react swiftly!",
     "ttitle5": "Pink Zone",
-    "tdesc5": "Precision tapping keeps you safe in the pink realm."
+    "tdesc5": "Precision tapping keeps you safe in the pink realm.",
+    "wsection1": "WeeChess is an engaging chess puzzle app designed to improve your chess skills. Test your chess knowledge and develop strategic thinking by solving mini puzzles. Practice checkmate patterns, tactics, and strategy.",
+    "wtitle1": "Puzzle Solving",
+    "wdesc1": "Solve chess puzzles at various difficulty levels. Improve your chess knowledge with checkmate, tactical, and strategic puzzles while developing your skills.",
+    "wtitle2": "Color Themes",
+    "wdesc2": "Personalize your app! Choose from different color themes to customize your chess puzzle-solving experience according to your preferences.",
+    "wtitle3": "Challenging Puzzles",
+    "wdesc3": "Challenge yourself! Test your chess skills with difficult puzzles and improve yourself with each solution.",
+    "wtitle4": "Puzzle Categories",
+    "wdesc4": "Solve puzzles in different categories. Expand your chess knowledge with checkmate, tactics, strategy, and more.",
+    "wtitle5": "Growth & Progress",
+    "wdesc5": "Track your chess skills through the puzzles you solve. Improve yourself with each puzzle solution and continue your chess journey."
   }
 }
