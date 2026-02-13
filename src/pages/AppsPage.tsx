@@ -103,6 +103,10 @@ const appsData = [
       { image: "/apps/weechess/4-c.png", titleKey: "apps.wtitle4", descKey: "apps.wdesc4" },
       { image: "/apps/weechess/5-c.png", titleKey: "apps.wtitle5", descKey: "apps.wdesc5" },
     ],
+    stores: [
+      { type: "google", url: "https://play.google.com/store/apps/details?id=com.hck.weechess&pcampaignid=web_share", buttonTextKey: "apps.downloadgoogle", bgColor: "bg-[#8B4513]", hoverBgColor: "hover:bg-[#70380D]" },
+      { type: "apple",  url: "https://apps.apple.com/tr/app/weechess-mini-chess-puzzles/id6757874776?platform=iphone",   buttonTextKey: "apps.downloadapple",  bgColor: "bg-[#000000]",       hoverBgColor: "hover:bg-[#333333]" },
+    ],
   },
 
 ];
