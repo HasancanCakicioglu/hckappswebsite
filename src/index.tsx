@@ -21,6 +21,7 @@ import SiteBlockerPrivacyPolicy from './pages/privacy-policy/SiteBlocker.tsx';
 import PrivacyPolicyWeeChess from './pages/privacy-policy/PrivacyPolicyWeeChess.tsx';
 import ExtensionsPage from './pages/ExtensionsPage.tsx';
 import WebsitesPage from './pages/WebsitesPage.tsx';
+import AudiobookPage from './pages/AudiobookPage.tsx';
 
 
 const router = createBrowserRouter([
@@ -88,6 +89,10 @@ const router = createBrowserRouter([
   {
     "path": "/privacy-policy-weechess",
     "element": <Layout><PrivacyPolicyWeeChess /></Layout>
+  },
+  {
+    "path": "/audiobook",
+    "element": <AudiobookPage />
   },
   {
     "path": "*",
