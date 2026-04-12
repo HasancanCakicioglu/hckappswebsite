@@ -243,7 +243,7 @@ const AudiobookPage: React.FC = () => {
         const utterance = new SpeechSynthesisUtterance(text);
         utterance.lang = 'tr-TR';
         utterance.rate = 0.8;
-        utterance.pitch = 0.1;
+        utterance.pitch = 0.9;
         window.speechSynthesis.speak(utterance);
     };
 
@@ -286,7 +286,7 @@ const AudiobookPage: React.FC = () => {
         const utterance = new SpeechSynthesisUtterance(textToRead);
         utterance.lang = 'tr-TR';
         utterance.rate = 0.8;
-        utterance.pitch = 0.1;
+        utterance.pitch = 0.9;
 
         // Move laser word by word
         utterance.onboundary = (event) => {
