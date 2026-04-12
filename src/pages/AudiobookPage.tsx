@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { FaMusic, FaPaperPlane, FaRobot } from 'react-icons/fa';
+import { FaMusic, FaPaperPlane, FaRobot, FaVolumeUp, FaStop, FaPlay, FaPause } from 'react-icons/fa';
 
 interface BookSegment {
     Content: string;
@@ -25,10 +25,11 @@ const AudiobookPage: React.FC = () => {
     const [showHelp, setShowHelp] = useState(false);
     const [hasSeenHelp, setHasSeenHelp] = useState(false);
     const [messages, setMessages] = useState<Message[]>([
-        { role: 'assistant', text: 'Spoiler-free AI asistanı hazır. Mor imleci istediğiniz noktaya getirip sorunuzu sorabilirsiniz.' }
+        { role: 'assistant', text: 'Yapay zeka asistanı hazır. Mor imleci istediğiniz noktaya getirip tıkladıktan sonra sorunuzu sorabilirsiniz.' }
     ]);
     const [inputValue, setInputValue] = useState('');
     const [isAsking, setIsAsking] = useState(false);
+    const [isReadingBook, setIsReadingBook] = useState(false);
     const chatScrollRef = useRef<HTMLDivElement>(null);
     const bookScrollRef = useRef<HTMLDivElement>(null);
     const textContainerRef = useRef<HTMLDivElement>(null);
@@ -48,8 +49,9 @@ const AudiobookPage: React.FC = () => {
         fetch('/lotr-tr.json')
             .then(res => res.json())
             .then(data => {
-                // Showing the entire book as requested
-                setSegments(data);
+                // Start from sequence index 68 as requested
+                const filteredData = data.filter((s: BookSegment) => s.SequenceIndex >= 68);
+                setSegments(filteredData);
                 setIsLoading(false);
             })
             .catch(err => {
@@ -115,6 +117,52 @@ const AudiobookPage: React.FC = () => {
         }
     };
 
+    const moveLaserToChar = (index: number, charOffset: number) => {
+        const textContainer = textContainerRef.current;
+        const segmentEl = textContainer?.querySelector(`[data-index="${index}"]`);
+        
+        if (segmentEl && textContainer) {
+            const textNode = segmentEl.firstChild;
+            if (!textNode) return;
+
+            try {
+                const range = document.createRange();
+                const textLength = textNode.textContent?.length || 0;
+                const safeOffset = Math.min(charOffset, textLength);
+                
+                range.setStart(textNode, safeOffset);
+                range.setEnd(textNode, Math.min(safeOffset + 1, textLength));
+                
+                const rect = range.getBoundingClientRect();
+                const containerRect = textContainer.getBoundingClientRect();
+                
+                if (rect.left !== 0) { // Check if rect is valid
+                    setCursorCoords({
+                        x: rect.left - containerRect.left,
+                        y: rect.top - containerRect.top,
+                        height: rect.height || 26
+                    });
+                }
+
+                // If it's a new segment or we're at the start, scroll into view
+                if (charOffset === 0) {
+                    segmentEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+                
+                setCursorInfo({ index, char: safeOffset });
+            } catch (e) {
+                // Fallback to segment start if range fails
+                const rect = segmentEl.getBoundingClientRect();
+                const containerRect = textContainer.getBoundingClientRect();
+                setCursorCoords({
+                    x: rect.left - containerRect.left,
+                    y: rect.top - containerRect.top,
+                    height: rect.height || 26
+                });
+            }
+        }
+    };
+
     const handleKeyDown = (e: React.KeyboardEvent) => {
         if (!['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End'].includes(e.key)) {
             e.preventDefault();
@@ -125,11 +173,20 @@ const AudiobookPage: React.FC = () => {
         e.preventDefault();
         if (!inputValue.trim() || !isLoggedIn || isLoggingIn || isAsking) return;
         
-        setIsAsking(true);
-        setMessages(prev => [...prev, { role: 'user', text: inputValue }]);
         const question = inputValue;
         setInputValue('');
 
+        if (!cursorInfo) {
+            setMessages(prev => [...prev, 
+                { role: 'user', text: question },
+                { role: 'assistant', text: 'Lütfen önce hikayede herhangi bir yere tıklayın ve sorunuzu sorun. O tıkladığınız yerden önceki bilgileri kullanarak sorunuzu cevaplayacağım.' }
+            ]);
+            return;
+        }
+
+        setIsAsking(true);
+        setMessages(prev => [...prev, { role: 'user', text: question }]);
+        
         // Prepare Context (Last 600 characters before the cursor)
         let context = "";
         if (cursorInfo) {
@@ -179,6 +236,81 @@ const AudiobookPage: React.FC = () => {
         } finally {
             setIsAsking(false);
         }
+    };
+
+    const speakText = (text: string) => {
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'tr-TR';
+        utterance.rate = 0.8;
+        utterance.pitch = 0.1;
+        window.speechSynthesis.speak(utterance);
+    };
+
+    const stopSpeaking = () => {
+        window.speechSynthesis.cancel();
+        setIsReadingBook(false);
+    };
+
+    const readBookFromCursor = () => {
+        if (segments.length === 0) return;
+        
+        // Ensure any previous speech is cancelled before starting a new one
+        window.speechSynthesis.cancel();
+        
+        setIsReadingBook(true);
+        let startIdx = 0;
+        let charStart = 0;
+
+        if (cursorInfo) {
+            startIdx = segments.findIndex(s => s.SequenceIndex === cursorInfo.index);
+            charStart = cursorInfo.char;
+            if (startIdx === -1) {
+                startIdx = 0;
+                charStart = 0;
+            }
+        }
+
+        readSegmentRecursive(startIdx, charStart);
+    };
+
+    const readSegmentRecursive = (segIdx: number, charStart: number = 0) => {
+        if (segIdx >= segments.length) {
+            setIsReadingBook(false);
+            return;
+        }
+
+        const segment = segments[segIdx];
+        
+        const textToRead = segment.AudioContent.substring(charStart);
+        const utterance = new SpeechSynthesisUtterance(textToRead);
+        utterance.lang = 'tr-TR';
+        utterance.rate = 0.8;
+        utterance.pitch = 0.1;
+
+        // Move laser word by word
+        utterance.onboundary = (event) => {
+            if (event.name === 'word') {
+                moveLaserToChar(segment.SequenceIndex, charStart + event.charIndex);
+            }
+        };
+
+        // Initial move for the segment
+        moveLaserToChar(segment.SequenceIndex, charStart);
+
+        utterance.onend = () => {
+             // Use setTimeout to ensure we don't hit race conditions with state
+             setTimeout(() => {
+                if (window.speechSynthesis.speaking || window.speechSynthesis.pending) return;
+                readSegmentRecursive(segIdx + 1, 0);
+             }, 100);
+        };
+        
+        utterance.onerror = () => {
+            setIsReadingBook(false);
+        };
+
+        window.speechSynthesis.speak(utterance);
     };
 
     const openHelp = () => {
@@ -255,7 +387,7 @@ const AudiobookPage: React.FC = () => {
     }
 
     return (
-        <div className="h-screen w-full bg-[#050505] text-white flex flex-col overflow-hidden font-sans border-t border-purple-500/20">
+        <div lang="tr" className="h-screen w-full bg-[#050505] text-white flex flex-col overflow-hidden font-sans border-t border-purple-500/20">
             <nav className="h-16 md:h-20 shrink-0 flex items-center justify-between px-4 md:px-10 bg-black/40 backdrop-blur-xl border-b border-white/5 z-50">
                 <div className="w-1/3 md:w-1/4 flex items-center gap-2 md:gap-4">
                     <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-purple-600 to-indigo-700 rounded-lg md:rounded-xl flex items-center justify-center shadow-lg shadow-purple-500/20 shrink-0">
@@ -266,7 +398,25 @@ const AudiobookPage: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="flex-grow flex justify-center">
+                <div className="flex-grow flex justify-center items-center gap-4 md:gap-8">
+                    {!isReadingBook ? (
+                         <button 
+                            onClick={readBookFromCursor}
+                            className={`w-10 h-10 md:w-14 md:h-14 rounded-xl flex items-center justify-center transition-all border border-white/10 bg-white/5 hover:bg-purple-600/20 text-purple-400`}
+                            title="Dinle"
+                        >
+                            <FaPlay className="text-xs md:text-xl" />
+                        </button>
+                    ) : (
+                        <button 
+                            onClick={stopSpeaking}
+                            className="w-10 h-10 md:w-14 md:h-14 bg-red-600/20 border border-red-500/40 rounded-xl flex items-center justify-center transition-all text-red-500 hover:bg-red-600/40"
+                            title="Durdur"
+                        >
+                            <FaPause className="text-xs md:text-xl" />
+                        </button>
+                    )}
+
                     <button 
                         onClick={openHelp}
                         className={`w-10 h-10 md:w-14 md:h-14 bg-purple-600 rounded-full flex items-center justify-center transition-all select-none relative ${!hasSeenHelp ? 'shadow-[0_0_40px_#a855f7] animate-[pulse_0.4s_infinite] border-2 border-white/20' : 'bg-white/5 border border-white/10 opacity-70 hover:opacity-100 hover:bg-purple-600/20'}`}
@@ -300,10 +450,12 @@ const AudiobookPage: React.FC = () => {
                         <h2 className="text-xl md:text-2xl font-black uppercase tracking-widest text-white mb-6">AUDIOBOOK AI [PROTOTİP]</h2>
                         
                         <div className="space-y-4 md:space-y-6 text-gray-400 text-sm md:text-lg leading-relaxed">
-                            <p className="text-white font-bold italic underline decoration-purple-500 underline-offset-8">Bu bir prototiptir. AI asla spoiler vermez.</p>
+                            <p className="text-white font-bold italic underline decoration-purple-500 underline-offset-8">Bu spoiler vermeyen okuma ve dinlemeye yardımcı olan bir yapay zeka asistanıdır.</p>
+                            <p>Yüzük kardeşliği Kitabı için hazırlanmıştır.</p>
                             <p>İmleci istediğiniz bir noktaya getirip tıklayın ve soru sorun; ai size spoiler vermeden imleçten önceki bilgileri kullanarak cevap verecektir.</p>
                             <p>İsterseniz imleci kitabın en sonuna getirip en başından bir şey sormayı deneyebilirsiniz.</p>
                             <p>Şuanlık geçmiş konuşmaları hatırlamıyor, her sorunuz öncekilerden bağımsız olarak değerlendiriliyor.</p>
+                            <p>Bu projenin asıl odak noktası yapay zeka asistanı deneyimidir; bu nedenle sesli okuma tarafında sistemin varsayılan (default) sesleri kullanılmıştır.</p>
                         </div>
 
                         <button 
@@ -322,15 +474,17 @@ const AudiobookPage: React.FC = () => {
                         ref={bookScrollRef}
                         contentEditable={!isLoading}
                         suppressContentEditableWarning={true}
+                        spellCheck="false"
                         onKeyUp={updateCursorPosition}
                         onMouseUp={updateCursorPosition}
                         onKeyDown={handleKeyDown}
                         className="flex-grow overflow-y-auto px-6 md:px-24 py-8 md:py-16 scroll-smooth custom-sidebar cursor-text outline-none caret-transparent"
+                        lang="tr"
                     >
                         <div ref={textContainerRef} className="max-w-4xl mx-auto relative pt-4 md:pt-10">
                             <div className="mb-8 md:mb-16 border-l-4 border-purple-500 pl-4 md:pl-8 pointer-events-none select-none">
                                 <h2 className="text-2xl md:text-4xl font-black uppercase tracking-[0.2em] mb-2 leading-tight">Yüzük Kardeşliği</h2>
-                                <p className="text-gray-500 text-[10px] md:text-sm font-bold tracking-widest uppercase">The Fellowship of the Ring • Content Segmented v1</p>
+                                <p className="text-gray-500 text-[10px] md:text-sm font-bold tracking-widest uppercase">The Fellowship of the Ring</p>
                             </div>
 
                             {cursorCoords && (
@@ -355,7 +509,7 @@ const AudiobookPage: React.FC = () => {
                                             <span 
                                                 key={idx} 
                                                 data-index={seg.SequenceIndex}
-                                                className="mr-1.5"
+                                                className="mr-1.5 transition-all duration-300"
                                             >
                                                 {seg.AudioContent}
                                             </span>
@@ -396,6 +550,24 @@ const AudiobookPage: React.FC = () => {
                                             : 'bg-white/[0.03] border border-white/5 text-gray-300 rounded-tl-none group-hover:bg-white/[0.05]'
                                     }`}>
                                         {msg.text}
+                                        {msg.role === 'assistant' && (
+                                            <div className="mt-4 flex gap-2 border-t border-white/5 pt-3">
+                                                <button 
+                                                    onClick={() => speakText(msg.text)}
+                                                    className="flex items-center gap-2 text-[10px] font-black uppercase tracking-tighter text-purple-400 hover:text-purple-300 transition-colors bg-purple-500/10 px-3 py-1.5 rounded-lg border border-purple-500/20"
+                                                >
+                                                    <FaVolumeUp className="text-xs" />
+                                                    DİNLE
+                                                </button>
+                                                <button 
+                                                    onClick={stopSpeaking}
+                                                    className="flex items-center gap-2 text-[10px] font-black uppercase tracking-tighter text-gray-500 hover:text-red-400 transition-colors px-3 py-1.5 rounded-lg border border-white/5"
+                                                >
+                                                    <FaStop className="text-[8px]" />
+                                                    DURDUR
+                                                </button>
+                                            </div>
+                                        )}
                                     </div>
                                     <div className={`text-[8px] md:text-[9px] uppercase tracking-widest font-black mt-2 text-gray-600 flex items-center gap-2 ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                                         {msg.role === 'assistant' && <FaRobot className="text-purple-500" />}
