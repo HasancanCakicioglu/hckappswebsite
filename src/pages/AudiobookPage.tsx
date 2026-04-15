@@ -23,7 +23,6 @@ const AudiobookPage: React.FC = () => {
     const [cursorInfo, setCursorInfo] = useState<{ index: number, char: number } | null>(null);
     const [cursorCoords, setCursorCoords] = useState<{ x: number, y: number, height: number } | null>(null);
     const [showHelp, setShowHelp] = useState(false);
-    const [hasSeenHelp, setHasSeenHelp] = useState(false);
     const [messages, setMessages] = useState<Message[]>([
         { role: 'assistant', text: 'Yapay zeka asistanı hazır. Mor imleci istediğiniz noktaya getirip tıkladıktan sonra sorunuzu sorabilirsiniz.' }
     ]);
@@ -40,6 +39,7 @@ const AudiobookPage: React.FC = () => {
         const token = localStorage.getItem('audiobook_token');
         if (token) {
             setIsLoggedIn(true);
+            setShowHelp(true);
         }
     }, []);
 
@@ -77,6 +77,7 @@ const AudiobookPage: React.FC = () => {
             if (result.success && result.token) {
                 localStorage.setItem('audiobook_token', result.token);
                 setIsLoggedIn(true);
+                setShowHelp(true);
             } else {
                 setLoginError(result.message || 'Giriş başarısız. Lütfen bilgileri kontrol edin.');
             }
@@ -313,11 +314,6 @@ const AudiobookPage: React.FC = () => {
         window.speechSynthesis.speak(utterance);
     };
 
-    const openHelp = () => {
-        setShowHelp(true);
-        setHasSeenHelp(true);
-    };
-
     useEffect(() => {
         if (chatScrollRef.current) {
             chatScrollRef.current.scrollTop = chatScrollRef.current.scrollHeight;
@@ -416,16 +412,6 @@ const AudiobookPage: React.FC = () => {
                             <FaPause className="text-xs md:text-xl" />
                         </button>
                     )}
-
-                    <button 
-                        onClick={openHelp}
-                        className={`w-10 h-10 md:w-14 md:h-14 bg-purple-600 rounded-full flex items-center justify-center transition-all select-none relative ${!hasSeenHelp ? 'shadow-[0_0_40px_#a855f7] animate-[pulse_0.4s_infinite] border-2 border-white/20' : 'bg-white/5 border border-white/10 opacity-70 hover:opacity-100 hover:bg-purple-600/20'}`}
-                    >
-                         <span className={`text-xl md:text-3xl font-black italic ${!hasSeenHelp ? 'text-white' : 'text-purple-500'}`}>?</span>
-                         {!hasSeenHelp && (
-                            <div className="absolute inset-0 rounded-full border-2 border-purple-500 animate-[ping_0.4s_infinite] opacity-40" />
-                         )}
-                    </button>
                 </div>
                 
                 <div className="w-1/3 md:w-1/4 flex items-center justify-end gap-2 md:gap-6">
@@ -440,36 +426,65 @@ const AudiobookPage: React.FC = () => {
 
             {showHelp && (
                 <div 
-                    className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-2xl px-6"
+                    className="fixed inset-0 z-[100] bg-black/98 backdrop-blur-3xl overflow-y-auto overscroll-contain"
                     onClick={() => setShowHelp(false)}
                 >
-                    <div 
-                        className="max-w-xl w-full bg-[#0a0a0a] border border-purple-500/20 rounded-[2rem] md:rounded-[3rem] p-8 md:p-12 shadow-[0_0_150px_rgba(168,85,247,0.2)] animate-fade-in"
-                        onClick={e => e.stopPropagation()}
-                    >
-                        <h2 className="text-xl md:text-2xl font-black uppercase tracking-widest text-white mb-6">AUDIOBOOK AI [PROTOTİP]</h2>
+                    <div className="flex min-h-screen w-full items-start justify-center p-4 md:p-10 pointer-events-none">
+                        <div 
+                            className="max-w-5xl w-full bg-[#0a0a0a] border border-purple-500/20 rounded-[1.5rem] md:rounded-[2.5rem] p-6 md:p-12 shadow-[0_40px_100px_rgba(0,0,0,0.8)] animate-fade-in relative pointer-events-auto my-auto"
+                            onClick={e => e.stopPropagation()}
+                        >
+                            <div className="flex justify-between items-center mb-10">
+                                <h2 className="text-xl md:text-3xl font-black uppercase tracking-widest text-white leading-tight">AUDIOBOOK AI SİSTEMİ</h2>
+                                <button 
+                                    onClick={() => setShowHelp(false)}
+                                    className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-colors"
+                                >
+                                    ✕
+                                </button>
+                            </div>
                         
-                        <div className="space-y-4 md:space-y-6 text-gray-400 text-sm md:text-lg leading-relaxed">
-                            <p className="text-white font-bold italic underline decoration-purple-500 underline-offset-8">Bu spoiler vermeyen okuma ve dinlemeye yardımcı olan bir yapay zeka asistanıdır.</p>
-                            <p>Yüzük kardeşliği Kitabı için hazırlanmıştır.</p>
-                            <p>İmleci istediğiniz bir noktaya getirip tıklayın ve soru sorun; ai size spoiler vermeden imleçten önceki bilgileri kullanarak cevap verecektir.</p>
-                            <p>İsterseniz imleci kitabın en sonuna getirip en başından bir şey sormayı deneyebilirsiniz.</p>
-                            <p>Şuanlık geçmiş konuşmaları hatırlamıyor, her sorunuz öncekilerden bağımsız olarak değerlendiriliyor.</p>
-                            <p>Bu projenin asıl odak noktası yapay zeka asistanı deneyimidir; bu nedenle sesli okuma tarafında sistemin varsayılan (default) sesleri kullanılmıştır.</p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
+                            <div className="space-y-6">
+                                <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-purple-500">NEDİR?</h3>
+                                <div className="space-y-4 text-gray-400 text-sm md:text-lg leading-relaxed">
+                                    <p className="text-white font-bold italic underline decoration-purple-500 underline-offset-8">Bu spoiler vermeyen okuma ve dinlemeye yardımcı olan bir yapay zeka asistanıdır.</p>
+                                    <p>Yüzük kardeşliği Kitabı için hazırlanmıştır.</p>
+                                    <p>Bu projenin asıl odak noktası yapay zeka asistanı deneyimidir; bu nedenle sesli okuma tarafında sistemin varsayılan (default) sesleri kullanılmıştır.</p>
+                                </div>
+                            </div>
+                            <div className="space-y-6">
+                                <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-purple-500">NASIL KULLANILIR?</h3>
+                                <div className="space-y-4 text-gray-400 text-sm md:text-lg leading-relaxed">
+                                    <p>İmleci istediğiniz bir noktaya getirip tıklayın ve soru sorun; ai size spoiler vermeden imleçten önceki bilgileri kullanarak cevap verecektir.</p>
+                                    <p>İsterseniz imleci kitabın en sonuna getirip en başından bir şey sormayı deneyebilirsiniz.</p>
+                                    <p>Şuanlık geçmiş konuşmaları hatırlamıyor, her sorunuz öncekilerden bağımsız olarak değerlendiriliyor.</p>
+                                </div>
+                            </div>
+                            <div className="space-y-6">
+                                <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-purple-500">NEDEN YAPTIM?</h3>
+                                <div className="space-y-4 text-gray-400 text-sm md:text-lg leading-relaxed italic border-l border-purple-500/30 pl-6">
+                                    <p>Dune fragmanı çıktıktan sonra Yüzüklerin Efendisi ve Dune gibi serilerin kitaplarını dinlemeye karar verdim ama çok karmaşık isimler, durumlar ve hikayeler vardı. Birini kaçırınca kitabın devamı mantıklı gelmiyordu.</p>
+                                    <p>İşte tam da bu yüzden bu AI asistanını geliştirdim; kitabın neresinde olursam olayım, asistan sadece o ana kadar dinlediğim kısımları analiz ederek sorularıma spoiler vermeden cevap veriyor.</p>
+                                </div>
+                            </div>
                         </div>
 
                         <button 
                             onClick={() => setShowHelp(false)}
-                            className="mt-10 w-full py-5 bg-purple-600 hover:bg-purple-700 rounded-xl font-black uppercase tracking-widest text-[13px] transition-all text-white border border-white/10"
+                            className="mt-12 w-full py-5 bg-purple-600 hover:bg-purple-700 rounded-xl font-black uppercase tracking-widest text-[13px] transition-all text-white border border-white/10"
                         >
-                            TAMAM
+                            SİSTEMİ KULLANMAYA BAŞLA
                         </button>
                     </div>
                 </div>
-            )}
+            </div>
+        )}
+
+
 
             <div className="flex-grow flex flex-col md:flex-row min-h-0 relative">
-                <div className="flex-[2] flex flex-col min-h-0 bg-[#070707] selection:bg-purple-600 selection:text-white">
+                <div className="flex-[3] flex flex-col min-h-0 bg-[#070707] selection:bg-purple-600 selection:text-white">
                     <div 
                         ref={bookScrollRef}
                         contentEditable={!isLoading}
@@ -481,7 +496,7 @@ const AudiobookPage: React.FC = () => {
                         className="flex-grow overflow-y-auto px-6 md:px-24 py-8 md:py-16 scroll-smooth custom-sidebar cursor-text outline-none caret-transparent"
                         lang="tr"
                     >
-                        <div ref={textContainerRef} className="max-w-4xl mx-auto relative pt-4 md:pt-10">
+                        <div ref={textContainerRef} className="max-w-5xl mx-auto relative pt-4 md:pt-10">
                             <div className="mb-8 md:mb-16 border-l-4 border-purple-500 pl-4 md:pl-8 pointer-events-none select-none">
                                 <h2 className="text-2xl md:text-4xl font-black uppercase tracking-[0.2em] mb-2 leading-tight">Yüzük Kardeşliği</h2>
                                 <p className="text-gray-500 text-[10px] md:text-sm font-bold tracking-widest uppercase">The Fellowship of the Ring</p>
@@ -524,17 +539,19 @@ const AudiobookPage: React.FC = () => {
 
                 <div className="hidden md:block w-px bg-white/5 h-full" />
 
-                <aside className="flex-1 flex flex-col min-h-0 bg-black/60 backdrop-blur-[60px] border-l border-white/5">
-                    <div className="p-8 border-b border-white/5 bg-white/[0.02] flex items-center justify-between shrink-0">
-                        <div className="flex items-center gap-3">
-                             <div className="h-2 w-2 rounded-full bg-purple-500/40" />
-                             <h3 className="font-bold uppercase tracking-widest text-[11px] text-gray-400">AUDIO ASSISTANT</h3>
-                        </div>
-                        {cursorInfo && (
-                            <div className="text-[10px] font-mono font-bold bg-purple-600/10 text-purple-400 px-3 py-1 rounded-full uppercase border border-purple-500/20">
-                                LOC: {cursorInfo.index}:{cursorInfo.char}
+                <aside className="flex-[2] flex flex-col min-h-0 bg-black/60 backdrop-blur-[60px] border-l border-white/5">
+                    <div className="p-8 border-b border-white/5 bg-white/[0.02] shrink-0">
+                        <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-3">
+                                <div className="h-2 w-2 rounded-full bg-purple-500/40" />
+                                <h3 className="font-bold uppercase tracking-widest text-[11px] text-gray-400">AUDIO ASSISTANT</h3>
                             </div>
-                        )}
+                            {cursorInfo && (
+                                <div className="text-[10px] font-mono font-bold bg-purple-600/10 text-purple-400 px-3 py-1 rounded-full uppercase border border-purple-500/20">
+                                    LOC: {cursorInfo.index}:{cursorInfo.char}
+                                </div>
+                            )}
+                        </div>
                     </div>
 
                     <div 

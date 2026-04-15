@@ -1,9 +1,19 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 export default function NotfoundPage() {
-const { t } = useTranslation("notfound");
+    const { t } = useTranslation("notfound");
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    useEffect(() => {
+        // LinkedIn sometimes appends invisible characters like %E2%81%A0 (Word Joiner)
+        // This check handles URLs that start with /audiobook but aren't exactly it
+        if (location.pathname.startsWith('/audiobook')) {
+            navigate('/audiobook', { replace: true });
+        }
+    }, [location.pathname, navigate]);
 
     return (
         <div className="flex flex-col items-center justify-center h-screen  text-[#00df9a]">
