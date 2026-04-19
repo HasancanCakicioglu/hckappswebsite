@@ -13,6 +13,9 @@ export default function NotfoundPage() {
         if (location.pathname.startsWith('/audiobook')) {
             navigate('/audiobook', { replace: true });
         }
+        if (location.pathname.startsWith('/storytel')) {
+            navigate('/storytel', { replace: true });
+        }
     }, [location.pathname, navigate]);
 
     return (

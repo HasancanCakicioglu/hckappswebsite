@@ -1,0 +1,39 @@
+[debug] [2026-04-19T16:41:52.150Z] ----------------------------------------------------------------------
+[debug] [2026-04-19T16:41:52.153Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hckec\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2026-04-19T16:41:52.153Z] CLI Version:   14.23.0
+[debug] [2026-04-19T16:41:52.153Z] Platform:      win32
+[debug] [2026-04-19T16:41:52.153Z] Node Version:  v22.10.0
+[debug] [2026-04-19T16:41:52.153Z] Time:          Sun Apr 19 2026 19:41:52 GMT+0300 (GMT+03:00)
+[debug] [2026-04-19T16:41:52.153Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-04-19T16:41:52.155Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2026-04-19T16:41:52.308Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-04-19T16:41:52.308Z] > authorizing via signed-in user (hckapplications@gmail.com)
+[debug] [2026-04-19T16:41:52.308Z] [iam] checking project hckapps-e7893 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-04-19T16:41:52.309Z] Checked if tokens are valid: false, expires at: 1776428021088
+[debug] [2026-04-19T16:41:52.310Z] Checked if tokens are valid: false, expires at: 1776428021088
+[debug] [2026-04-19T16:41:52.310Z] > refreshing access token with scopes: []
+[debug] [2026-04-19T16:41:52.311Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-04-19T16:41:52.311Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-04-19T16:41:52.476Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-04-19T16:41:52.476Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-04-19T16:41:52.483Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/hckapps-e7893:testIamPermissions [none]
+[debug] [2026-04-19T16:41:52.484Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/hckapps-e7893:testIamPermissions x-goog-quota-user=projects/hckapps-e7893
+[debug] [2026-04-19T16:41:52.484Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hckapps-e7893:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-04-19T16:41:52.685Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2026-04-19T16:41:52.685Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2026-04-19T16:41:53.370Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/hckapps-e7893:testIamPermissions 200
+[debug] [2026-04-19T16:41:53.371Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hckapps-e7893:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-04-19T16:41:53.371Z] Checked if tokens are valid: true, expires at: 1776620511477
+[debug] [2026-04-19T16:41:53.371Z] Checked if tokens are valid: true, expires at: 1776620511477
+[debug] [2026-04-19T16:41:53.371Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hckapps-e7893 [none]
+[debug] [2026-04-19T16:41:53.776Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hckapps-e7893 200
+[debug] [2026-04-19T16:41:53.776Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hckapps-e7893 {"projectId":"hckapps-e7893","projectNumber":"154241699012","displayName":"HckApps","name":"projects/hckapps-e7893","resources":{"hostingSite":"hckapps-e7893"},"state":"ACTIVE","etag":"1_f3b7fd4b-00ae-457d-a641-e12bc351df7f"}
+[info] 
+[info] === Deploying to 'hckapps-e7893'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2026-04-19T16:41:53.778Z] Checked if tokens are valid: true, expires at: 1776620511477
+[debug] [2026-04-19T16:41:53.778Z] Checked if tokens are valid: true, expires at: 1776620511477
+[debug] [2026-04-19T16:41:53.779Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hckapps-e7893/versions [none]
+[debug] [2026-04-19T16:41:53.779Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hckapps-e7893/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}

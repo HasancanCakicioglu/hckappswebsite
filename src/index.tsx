@@ -22,6 +22,7 @@ import PrivacyPolicyWeeChess from './pages/privacy-policy/PrivacyPolicyWeeChess.
 import ExtensionsPage from './pages/ExtensionsPage.tsx';
 import WebsitesPage from './pages/WebsitesPage.tsx';
 import AudiobookPage from './pages/AudiobookPage.tsx';
+import StorytelPage from './pages/StorytelPage.tsx';
 
 
 const router = createBrowserRouter([
@@ -93,6 +94,10 @@ const router = createBrowserRouter([
   {
     "path": "/audiobook",
     "element": <AudiobookPage />
+  },
+  {
+    "path": "/storytel",
+    "element": <StorytelPage />
   },
   {
     "path": "*",
