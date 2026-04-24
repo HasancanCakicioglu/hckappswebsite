@@ -23,6 +23,7 @@ import ExtensionsPage from './pages/ExtensionsPage.tsx';
 import WebsitesPage from './pages/WebsitesPage.tsx';
 import AudiobookPage from './pages/AudiobookPage.tsx';
 import StorytelPage from './pages/StorytelPage.tsx';
+import PrivacyPolicyMinesweeper from './pages/privacy-policy/PrivacyPolicyMinesweeper.tsx';
 
 
 const router = createBrowserRouter([
@@ -90,6 +91,10 @@ const router = createBrowserRouter([
   {
     "path": "/privacy-policy-weechess",
     "element": <Layout><PrivacyPolicyWeeChess /></Layout>
+  },
+  {
+    "path": "/privacy-policy-minesweeper",
+    "element": <Layout><PrivacyPolicyMinesweeper /></Layout>
   },
   {
     "path": "/audiobook",

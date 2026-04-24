@@ -3,9 +3,32 @@ import { FaGooglePlay, FaApple } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import { useParams, useNavigate } from "react-router-dom";
 
+interface AppFeature {
+  image: string;
+  titleKey: string;
+  descKey: string;
+}
+
+interface AppStore {
+  type: string;
+  url: string;
+  buttonTextKey: string;
+  bgColor: string;
+  hoverBgColor: string;
+}
+
+interface App {
+  id: string;
+  name: string;
+  logo: string;
+  titleColor: string;
+  descriptionKey: string;
+  features: AppFeature[];
+  stores: AppStore[];
+}
+
 // --- App Data ---
-// (Uygulama verileri öncekiyle aynı, burada gösterilmiyor)
-const appsData = [
+const appsData: App[] = [
   {
     id: "voidnote",
     name: "VoidNote",
@@ -108,12 +131,16 @@ const appsData = [
       { type: "apple",  url: "https://apps.apple.com/tr/app/weechess-mini-chess-puzzles/id6757874776?platform=iphone",   buttonTextKey: "apps.downloadapple",  bgColor: "bg-[#000000]",       hoverBgColor: "hover:bg-[#333333]" },
     ],
   },
-
 ];
 
 
+interface AppShowcaseProps {
+  apps: App[];
+  initialAppId: string | undefined;
+}
+
 // --- Yeniden Kullanılabilir Uygulama Vitrini Bileşeni ---
-function AppShowcase({ apps, initialAppId }) {
+function AppShowcase({ apps, initialAppId }: AppShowcaseProps) {
   const { t } = useTranslation("apps");
   const navigate = useNavigate();
 
@@ -139,20 +166,21 @@ function AppShowcase({ apps, initialAppId }) {
 
 
   // Placeholder resim URL'si oluşturur.
-  const placeholderImageUrl = (width = 100, height = 100, text = "Image") =>
+  const placeholderImageUrl = (width: number = 100, height: number = 100, text: string = "Image") =>
     `https://placehold.co/${width}x${height}/e2e8f0/94a3b8?text=${encodeURIComponent(text)}`;
 
   // Resim yükleme hatasını ele alır.
-  const handleImageError = (event) => {
-    console.warn("Resim yüklenemedi:", event.target.src);
-    const width = event.target.clientWidth || 100;
-    const height = event.target.clientHeight || 100;
-    event.target.src = placeholderImageUrl(width, height, 'Bulunamadı');
-    event.target.onerror = null;
+  const handleImageError = (event: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    const target = event.target as HTMLImageElement;
+    console.warn("Resim yüklenemedi:", target.src);
+    const width = target.clientWidth || 100;
+    const height = target.clientHeight || 100;
+    target.src = placeholderImageUrl(width, height, 'Bulunamadı');
+    target.onerror = null;
   };
 
   // Uygulama ikonuna tıklandığında URL'yi günceller.
-  const handleIconClick = (appId) => {
+  const handleIconClick = (appId: string) => {
     navigate(`/apps/${appId}`);
   };
 
