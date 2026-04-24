@@ -27,11 +27,14 @@ const PrivacyPolicyMinesweeper = () => {
         <p className="mb-3 leading-relaxed text-gray-300 dark:text-white">
           {t('minesweeper.section1Text')}
         </p>
-        <ul className="list-disc pl-6 space-y-2 text-gray-300 dark:text-white">
+        <ul className="list-disc pl-6 space-y-2 text-gray-300 dark:text-white mb-3">
           <li>{t('minesweeper.section1List1')}</li>
           <li>{t('minesweeper.section1List2')}</li>
           <li>{t('minesweeper.section1List3')}</li>
         </ul>
+        <p className="leading-relaxed text-gray-300 dark:text-white">
+          {t('minesweeper.section1Text2')}
+        </p>
       </section>
 
       {/* 2. How We Use Your Information */}
@@ -42,13 +45,16 @@ const PrivacyPolicyMinesweeper = () => {
         <p className="mb-3 leading-relaxed text-gray-300 dark:text-white">
           {t('minesweeper.section2Text')}
         </p>
-        <ul className="list-disc pl-6 space-y-2 text-gray-300 dark:text-white">
+        <ul className="list-disc pl-6 space-y-2 text-gray-300 dark:text-white mb-3">
           <li>{t('minesweeper.section2List1')}</li>
           <li>{t('minesweeper.section2List2')}</li>
           <li>{t('minesweeper.section2List3')}</li>
           <li>{t('minesweeper.section2List4')}</li>
           <li>{t('minesweeper.section2List5')}</li>
         </ul>
+        <p className="leading-relaxed text-gray-300 dark:text-white">
+          {t('minesweeper.section2Text2')}
+        </p>
       </section>
 
       {/* 3. Third-Party Services */}
@@ -101,7 +107,7 @@ const PrivacyPolicyMinesweeper = () => {
         </p>
       </section>
 
-      {/* 7. Changes to This Policy */}
+      {/* 7. Data Retention */}
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-3 text-gray-200 dark:text-white">
           {t('minesweeper.section7Title')}
@@ -111,19 +117,29 @@ const PrivacyPolicyMinesweeper = () => {
         </p>
       </section>
 
-      {/* 8. Contact Us */}
+      {/* 8. Changes to This Policy */}
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-3 text-gray-200 dark:text-white">
           {t('minesweeper.section8Title')}
         </h2>
-        <p className="mb-3 leading-relaxed text-gray-300 dark:text-white">
+        <p className="leading-relaxed text-gray-300 dark:text-white">
           {t('minesweeper.section8Text')}
+        </p>
+      </section>
+
+      {/* 9. Contact Us */}
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-3 text-gray-200 dark:text-white">
+          {t('minesweeper.section9Title')}
+        </h2>
+        <p className="mb-3 leading-relaxed text-gray-300 dark:text-white">
+          {t('minesweeper.section9Text')}
         </p>
         <ul className="list-none pl-0 mt-2 space-y-2">
           <li>
             <Trans
               t={t}
-              i18nKey="minesweeper.section8ListItem1"
+              i18nKey="minesweeper.section9ListItem1"
               values={{ contactEmail }}
               components={[
                 <strong className="font-semibold text-gray-200 dark:text-white" />,
