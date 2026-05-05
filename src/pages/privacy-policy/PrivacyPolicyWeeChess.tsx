@@ -32,10 +32,10 @@ const PrivacyPolicyWeeChess = () => {
           {t('weeChess.section2Text')}
         </p>
         <h3 className="text-xl font-semibold mb-2 mt-4 text-gray-200 dark:text-white">
-          {t('weeChess.section2_2Title')}
+          {t('weeChess.section2_1Title')}
         </h3>
         <p className="mb-3 leading-relaxed text-gray-300 dark:text-white">
-          {t('weeChess.section2_2Text')}
+          {t('weeChess.section2_1Text')}
         </p>
       </section>
 
@@ -53,15 +53,19 @@ const PrivacyPolicyWeeChess = () => {
         <p className="mb-2 leading-relaxed text-gray-300 dark:text-white">
           {t('weeChess.section3_1Text')}
         </p>
-        <p className="mb-3">
-          <a
-            href={t('weeChess.section3_1Link')}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-400 hover:underline"
-          >
-            {t('weeChess.section3_1LinkText')}
-          </a>
+
+        <h4 className="text-lg font-semibold mb-1 mt-3 text-gray-200 dark:text-white">
+          {t('weeChess.section3_1_1Title')}
+        </h4>
+        <p className="mb-2 leading-relaxed text-gray-300 dark:text-white">
+          {t('weeChess.section3_1_1Text')}
+        </p>
+
+        <h4 className="text-lg font-semibold mb-1 mt-3 text-gray-200 dark:text-white">
+          {t('weeChess.section3_1_2Title')}
+        </h4>
+        <p className="mb-3 leading-relaxed text-gray-300 dark:text-white">
+          {t('weeChess.section3_1_2Text')}
         </p>
 
         <h3 className="text-xl font-semibold mb-2 mt-4 text-gray-200 dark:text-white">
@@ -118,15 +122,27 @@ const PrivacyPolicyWeeChess = () => {
 
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-3 text-gray-200 dark:text-white">
+          {t('weeChess.section7Title')}
+        </h2>
+        {t('weeChess.section7Text') && (
+          <p className="mb-2 leading-relaxed text-gray-300 dark:text-white">
+            {t('weeChess.section7Text')}
+          </p>
+        )}
+        <ul className="list-disc pl-6 mb-3 space-y-1 text-gray-300 dark:text-white">
+          <li>{t('weeChess.section7Item1')}</li>
+          <li>{t('weeChess.section7Item2')}</li>
+          <li>{t('weeChess.section7Item3')}</li>
+        </ul>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-3 text-gray-200 dark:text-white">
           {t('weeChess.section8Title')}
         </h2>
-        <p className="mb-2 leading-relaxed text-gray-300 dark:text-white">
+        <p className="mb-3 leading-relaxed text-gray-300 dark:text-white">
           {t('weeChess.section8Text')}
         </p>
-        <ul className="list-disc pl-6 mb-3 space-y-1 text-gray-300 dark:text-white">
-          <li>{t('weeChess.section8Item1')}</li>
-          <li>{t('weeChess.section8Item2')}</li>
-        </ul>
       </section>
 
       <section className="mb-8">
@@ -140,29 +156,29 @@ const PrivacyPolicyWeeChess = () => {
 
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-3 text-gray-200 dark:text-white">
-          {t('weeChess.section11Title')}
+          {t('weeChess.section10Title')}
         </h2>
         <p className="mb-3 leading-relaxed text-gray-300 dark:text-white">
-          {t('weeChess.section11Text')}
+          {t('weeChess.section10Text')}
         </p>
       </section>
 
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-3 text-gray-200 dark:text-white">
-          {t('weeChess.section12Title')}
+          {t('weeChess.section11Title')}
         </h2>
         <p className="mb-3 leading-relaxed text-gray-300 dark:text-white">
-          {t('weeChess.section12Text')}
+          {t('weeChess.section11Text')}
         </p>
         <ul className="list-none pl-0 mt-2 space-y-2">
           <li>
             <Trans
               t={t}
-              i18nKey="weeChess.section12ListItem1"
+              i18nKey="weeChess.section11ListItem1"
               values={{ contactEmail }}
               components={[
-                <strong className="font-semibold text-gray-200 dark:text-white" />,
-                <a className="text-blue-600 dark:text-blue-400 hover:underline" href={`mailto:${contactEmail}`} aria-label={contactEmail} />
+                <strong key="0" className="font-semibold text-gray-200 dark:text-white" />,
+                <a key="1" className="text-blue-600 dark:text-blue-400 hover:underline" href={`mailto:${contactEmail}`} aria-label={contactEmail} />
               ]}
             />
           </li>
