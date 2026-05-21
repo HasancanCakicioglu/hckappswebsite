@@ -131,6 +131,24 @@ const appsData: App[] = [
       { type: "apple",  url: "https://apps.apple.com/tr/app/weechess-mini-chess-puzzles/id6757874776?platform=iphone",   buttonTextKey: "apps.downloadapple",  bgColor: "bg-[#000000]",       hoverBgColor: "hover:bg-[#333333]" },
     ],
   },
+  {
+    id: "minesweeper",
+    name: "Minesweeper",
+    logo: "/apps/minesweeper/logo.webp",
+    titleColor: "text-[#4CAF50]",
+    descriptionKey: "apps.msection1",
+    features: [
+      { image: "/apps/minesweeper/1.png", titleKey: "apps.mtitle1", descKey: "apps.mdesc1" },
+      { image: "/apps/minesweeper/2.png", titleKey: "apps.mtitle2", descKey: "apps.mdesc2" },
+      { image: "/apps/minesweeper/3.png", titleKey: "apps.mtitle3", descKey: "apps.mdesc3" },
+      { image: "/apps/minesweeper/4.png", titleKey: "apps.mtitle4", descKey: "apps.mdesc4" },
+      { image: "/apps/minesweeper/5.png", titleKey: "apps.mtitle5", descKey: "apps.mdesc5" },
+    ],
+    stores: [
+      { type: "google", url: "https://play.google.com/store/apps/details?id=com.hck.minesweeper&pcampaignid=web_share", buttonTextKey: "apps.downloadgoogle", bgColor: "bg-[#4CAF50]", hoverBgColor: "hover:bg-[#388E3C]" },
+      { type: "apple",  url: "https://apps.apple.com/tr/app/minesweeper-minimal-3d/id6762569702",   buttonTextKey: "apps.downloadapple",  bgColor: "bg-[#000000]",       hoverBgColor: "hover:bg-[#333333]" },
+    ],
+  },
 ];
 
 

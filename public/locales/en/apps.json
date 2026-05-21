@@ -60,7 +60,18 @@
     "wdesc3": "Challenge yourself! Test your chess skills with difficult puzzles and improve yourself with each solution.",
     "wtitle4": "Puzzle Categories",
     "wdesc4": "Solve puzzles in different categories. Expand your chess knowledge with checkmate, tactics, strategy, and more.",
-    "wtitle5": "Growth & Progress",
-    "wdesc5": "Track your chess skills through the puzzles you solve. Improve yourself with each puzzle solution and continue your chess journey."
+    "wtitle5": "Checkmate Patterns & Tactics",
+    "wdesc5": "Track your chess skills through the puzzles you solve. Improve yourself with each puzzle solution and continue your chess journey.",
+    "msection1": "Minesweeper is a fun and engaging puzzle game that brings the classic brain game to your mobile device with a modern, sleek interface. Challenge your mind with different difficulty levels, customizable boards, and fluid controls to clear all mines safely.",
+    "mtitle1": "Classic Gameplay",
+    "mdesc1": "Train your brain with the classic rules of Minesweeper.",
+    "mtitle2": "Difficulty Levels",
+    "mdesc2": "Test your skills with Easy, Medium, Hard, and custom boards.",
+    "mtitle3": "Detailed Statistics",
+    "mdesc3": "Track your best times, win rates, and general game history.",
+    "mtitle4": "Modern Design",
+    "mdesc4": "Personalize your experience with gorgeous, eye-friendly color themes.",
+    "mtitle5": "Intuitive Controls",
+    "mdesc5": "Play comfortably with fluid touch controls and a dedicated quick-flagging mode."
   }
 }
