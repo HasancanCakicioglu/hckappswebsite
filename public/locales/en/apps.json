@@ -72,6 +72,13 @@
     "mtitle4": "Modern Design",
     "mdesc4": "Personalize your experience with gorgeous, eye-friendly color themes.",
     "mtitle5": "Intuitive Controls",
-    "mdesc5": "Play comfortably with fluid touch controls and a dedicated quick-flagging mode."
+    "mdesc5": "Play comfortably with fluid touch controls and a dedicated quick-flagging mode.",
+    "gsection1": "Graviton is a thrilling space simulation and arcade game where players maneuver through planets using gravitational forces, dodge obstacles, and survive in the vastness of space. It offers a unique experience with stunning graphics and smooth physics mechanics.",
+    "gtitle1": "Gravity Control",
+    "gdesc1": "Tap the screen to control gravitational fields and steer your spacecraft's orbit.",
+    "gtitle2": "Challenging Obstacles",
+    "gdesc2": "Survive by dodging planets, asteroids, and other obstacles in the space vacuum.",
+    "gtitle3": "High Score & Leaderboard",
+    "gdesc3": "Reach the furthest distance in space and secure your spot on the global leaderboard."
   }
 }

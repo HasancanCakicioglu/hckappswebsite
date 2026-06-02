@@ -149,7 +149,24 @@ const appsData: App[] = [
       { type: "apple",  url: "https://apps.apple.com/tr/app/minesweeper-minimal-3d/id6762569702",   buttonTextKey: "apps.downloadapple",  bgColor: "bg-[#000000]",       hoverBgColor: "hover:bg-[#333333]" },
     ],
   },
+  {
+    id: "graviton",
+    name: "Graviton",
+    logo: "/apps/graviton/logo.png",
+    titleColor: "text-[#3B82F6]",
+    descriptionKey: "apps.gsection1",
+    features: [
+      { image: "/apps/graviton/1.png", titleKey: "apps.gtitle1", descKey: "apps.gdesc1" },
+      { image: "/apps/graviton/2.png", titleKey: "apps.gtitle2", descKey: "apps.gdesc2" },
+      { image: "/apps/graviton/3.png", titleKey: "apps.gtitle3", descKey: "apps.gdesc3" },
+    ],
+    stores: [
+      { type: "google", url: "https://play.google.com/store/apps/details?id=com.hck.gravity&hl=en", buttonTextKey: "apps.downloadgoogle", bgColor: "bg-[#3B82F6]", hoverBgColor: "hover:bg-[#2563EB]" },
+      { type: "apple",  url: "https://apps.apple.com/tr/app/graviton-space-orbit/id6771879290",   buttonTextKey: "apps.downloadapple",  bgColor: "bg-[#000000]",       hoverBgColor: "hover:bg-[#333333]" },
+    ],
+  },
 ];
+
 
 
 interface AppShowcaseProps {

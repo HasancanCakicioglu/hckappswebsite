@@ -25,6 +25,7 @@ import AudiobookPage from './pages/AudiobookPage.tsx';
 import StorytelPage from './pages/StorytelPage.tsx';
 import PrivacyPolicyMinesweeper from './pages/privacy-policy/PrivacyPolicyMinesweeper.tsx';
 import PrivacyPolicyGraviton from './pages/privacy-policy/PrivacyPolicyGraviton.tsx';
+import PrivacyPolicyCopDodger from './pages/privacy-policy/PrivacyPolicyCopDodger.tsx';
 
 
 const router = createBrowserRouter([
@@ -100,6 +101,10 @@ const router = createBrowserRouter([
   {
     "path": "/privacy-policy-graviton",
     "element": <Layout><PrivacyPolicyGraviton /></Layout>
+  },
+  {
+    "path": "/privacy-policy-copdodger",
+    "element": <Layout><PrivacyPolicyCopDodger /></Layout>
   },
   {
     "path": "/audiobook",

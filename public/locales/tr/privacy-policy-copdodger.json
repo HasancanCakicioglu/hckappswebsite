@@ -1,0 +1,76 @@
+{
+  "copdodger": {
+    "title": "Cop Dodger Gizlilik Politikası",
+    "effectiveDateLabel": "Son güncelleme: ",
+    "effectiveDate": "2 Haziran 2026",
+    "intro": "Bu Gizlilik Politikası, <1>Cop Dodger</1> mobil oyununun hangi verileri nasıl kullandığını açıklar. Oyunu kullanarak bu politikada açıklanan uygulamaları kabul etmiş olursunuz.",
+    
+    "section1Title": "Topladığımız Veriler",
+    "section1Text": "Cop Dodger doğrudan ad, soyad, e-posta adresi veya telefon numarası istemez. Ancak oyunun çalışması, reklamlar, satın almalar, analiz ve oyun servisleri için bazı veriler işlenebilir. Toplanabilecek veya işlenebilecek veri türleri şunlardır:",
+    "section1Item1": "Oyun ilerlemesi, altın miktarı, yüksek skor, istatistikler ve ayarlar",
+    "section1Item2": "Liderlik tablosu skorları ve oyun başarı/ilerleme bilgileri",
+    "section1Item3": "Satın alma durumu ve ürün bilgileri",
+    "section1Item4": "Reklam gösterimi, reklam etkileşimi ve reklam kimlikleri gibi reklamla ilgili bilgiler",
+    "section1Item5": "Cihaz bilgileri, uygulama sürümü, işletim sistemi, hata kayıtları ve performans bilgileri",
+    "section1Item6": "Uygulama içi analiz olayları, örneğin satın alma, ödüllü reklam veya oyun içi harcama olayları",
+    "section1Item7": "Reklam gizlilik tercihleri ve izin durumu",
+    
+    "section2Title": "Verileri Nasıl Kullanıyoruz",
+    "section2Text": "Veriler aşağıdaki amaçlarla kullanılır:",
+    "section2Item1": "Oyundaki ilerlemenizi ve ayarlarınızı kaydetmek",
+    "section2Item2": "Bulut kayıt, liderlik tabloları ve oyun servisleri sunmak",
+    "section2Item3": "Uygulama içi satın almaları doğrulamak ve yönetmek",
+    "section2Item4": "Reklam göstermek ve reklam tercihlerinizi uygulamak",
+    "section2Item5": "Oyunun performansını, hatalarını ve kullanımını anlamak",
+    "section2Item6": "Oyunu geliştirmek, dengelemek ve kötüye kullanımı önlemek",
+    
+    "section3Title": "Üçüncü Taraf Servisler",
+    "section3Text": "Cop Dodger bazı üçüncü taraf servisler kullanır. Bu servisler kendi gizlilik politikalarına göre veri işleyebilir.",
+    "section3Item1": "<0>Google AdMob</0>: Reklam göstermek ve reklam performansını ölçmek için kullanılır.",
+    "section3Item2": "<0>Google User Messaging Platform (UMP)</0>: Uygun bölgelerde reklam gizlilik tercihlerinizi yönetmek için kullanılır.",
+    "section3Item3": "<0>Firebase Analytics</0>: Uygulama kullanımını ve oyun içi olayları analiz etmek için kullanılır.",
+    "section3Item4": "<0>RevenueCat</0>: Uygulama içi satın almaları ve abonelik/ürün haklarını yönetmek için kullanılır.",
+    "section3Item5": "<0>Google Play Games Services</0>: Android cihazlarda oturum açma, bulut kayıt ve liderlik tabloları için kullanılır.",
+    "section3Item6": "<0>Apple Game Center</0>: iOS cihazlarda liderlik tabloları ve oyun servisleri için kullanılabilir.",
+    "section3Item7": "<0>Sentry veya benzeri hata takip sistemleri</0>: Uygulama hatalarını ve teknik sorunları tespit etmek için kullanılabilir.",
+    "section3Footer": "Bu servislerin topladığı veriler cihazınıza, ülkenize, izin tercihlerinize ve kullandığınız platforma göre değişebilir.",
+    
+    "section4Title": "Reklamlar ve Gizlilik Tercihleri",
+    "section4Text1": "Cop Dodger reklam gösterebilir. Reklamlar Google AdMob aracılığıyla sağlanır.",
+    "section4Text2": "Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre gibi bölgelerde, reklam tercihlerinizi yönetmeniz için Google UMP aracılığıyla bir gizlilik formu gösterilebilir. Uygulama ayarlarında mevcutsa <1>Gizlilik Seçenekleri</1> bölümünden reklam tercihlerinizi daha sonra değiştirebilirsiniz.",
+    "section4Text3": "Reklam tercihlerinize bağlı olarak kişiselleştirilmiş veya kişiselleştirilmemiş reklamlar gösterilebilir ya da bazı durumlarda reklam isteği yapılmayabilir.",
+    
+    "section5Title": "Uygulama İçi Satın Almalar",
+    "section5Text1": "Cop Dodger uygulama içi satın almalar sunabilir. Satın alma işlemleri Google Play veya Apple App Store üzerinden gerçekleştirilir. Satın alma haklarının doğrulanması ve yönetilmesi için RevenueCat kullanılır.",
+    "section5Text2": "Ödeme bilgileriniz Cop Dodger tarafından doğrudan alınmaz veya saklanmaz. Ödeme işlemleri ilgili uygulama mağazası tarafından yönetilir.",
+    
+    "section6Title": "Oyun Servisleri, Bulut Kayıt ve Liderlik Tabloları",
+    "section6Text1": "Google Play Games Services veya Apple Game Center ile oturum açarsanız, oyun skorlarınız, liderlik tablosu kayıtlarınız, bulut kayıt bilgileriniz ve oyun ilerlemeniz ilgili platform servisleriyle paylaşılabilir veya bu servisler tarafından işlenebilir.",
+    "section6Text2": "Bu özellikleri kullanmak istemezseniz oyun servislerine giriş yapmayabilir veya platform hesabınızın gizlilik ayarlarını değiştirebilirsiniz.",
+    
+    "section7Title": "Yerel Olarak Saklanan Bilgiler",
+    "section7Text1": "Cop Dodger bazı bilgileri cihazınızda yerel olarak saklar. Bunlara örnek olarak oyun ayarları, ses ve titreşim tercihleri, altın miktarı, yüksek skor ve benzeri oyun ilerlemesi verileri verilebilir.",
+    "section7Text2": "Uygulamayı silmeniz durumunda cihazda yerel olarak saklanan bazı veriler silinebilir. Bulut kayıt veya platform servisleriyle eşitlenen veriler ilgili servislerde kalabilir.",
+    
+    "section8Title": "Çocukların Gizliliği",
+    "section8Text": "Cop Dodger, çocuklardan bilerek kişisel bilgi toplamayı amaçlamaz. Bir ebeveyn veya yasal vasi, çocuğuna ait verilerin işlendiğini düşünürse bizimle iletişime geçebilir.",
+    
+    "section9Title": "Veri Güvenliği",
+    "section9Text": "Verilerin güvenliğini korumak için makul teknik ve idari önlemler kullanılır. Ancak internet üzerinden yapılan hiçbir aktarım veya elektronik saklama yöntemi tamamen güvenli değildir.",
+    
+    "section10Title": "Verilerin Saklanması",
+    "section10Text": "Veriler, bu politikada belirtilen amaçlar için gerekli olduğu sürece saklanabilir. Yerel oyun verileri cihazınızda kalabilir. Üçüncü taraf servisler tarafından işlenen veriler, ilgili servisin kendi saklama politikalarına göre tutulabilir.",
+    
+    "section11Title": "Haklarınız",
+    "section11Text1": "Bulunduğunuz ülkeye veya bölgeye bağlı olarak kişisel verilerinize erişme, düzeltme, silme, işlemeyi kısıtlama veya itiraz etme haklarınız olabilir.",
+    "section11Text2": "Reklam tercihlerinizi uygulama içindeki gizlilik seçeneklerinden veya cihazınızın reklam/izleme ayarlarından değiştirebilirsiniz. Google Play Games, Apple Game Center, Google, Apple veya RevenueCat gibi üçüncü taraf servislerde tutulan veriler için ilgili servisin hesap ve gizlilik ayarlarını kullanmanız gerekebilir.",
+    
+    "section12Title": "Değişiklikler",
+    "section12Text": "Bu Gizlilik Politikası zaman zaman güncellenebilir. Güncel sürüm bu sayfada yayınlandığında yürürlüğe girer.",
+    
+    "section13Title": "İletişim",
+    "section13Text": "Gizlilikle ilgili sorularınız için geliştiriciyle aşağıdaki iletişim adresinden bağlantı kurabilirsiniz:",
+    "contactEmail": "hckapplications@gmail.com",
+    "emailLabel": "<0>E-posta:</0> <1>{{contactEmail}}</1>"
+  }
+}

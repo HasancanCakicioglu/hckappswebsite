@@ -1,0 +1,76 @@
+{
+  "copdodger": {
+    "title": "Cop Dodger Privacy Policy",
+    "effectiveDateLabel": "Last updated: ",
+    "effectiveDate": "June 2, 2026",
+    "intro": "This Privacy Policy explains how the <1>Cop Dodger</1> mobile game uses what data. By using the game, you consent to the practices described in this policy.",
+    
+    "section1Title": "Data We Collect",
+    "section1Text": "Cop Dodger does not directly request name, surname, email address, or phone number. However, some data may be processed for the operation of the game, advertisements, purchases, analytics, and game services. The types of data that may be collected or processed include:",
+    "section1Item1": "Game progress, gold amount, high score, statistics, and settings",
+    "section1Item2": "Leaderboard scores and game achievements/progress info",
+    "section1Item3": "Purchase status and product information",
+    "section1Item4": "Ad-related information such as ad views, ad interactions, and advertising IDs",
+    "section1Item5": "Device information, app version, operating system, crash logs, and performance data",
+    "section1Item6": "In-app analytics events, such as purchase, rewarded ad, or in-game spend events",
+    "section1Item7": "Ad privacy preferences and consent status",
+    
+    "section2Title": "How We Use Data",
+    "section2Text": "Data is used for the following purposes:",
+    "section2Item1": "To save your in-game progress and settings",
+    "section2Item2": "To provide cloud saves, leaderboards, and game services",
+    "section2Item3": "To verify and manage in-app purchases",
+    "section2Item4": "To display ads and apply your advertising preferences",
+    "section2Item5": "To understand game performance, crashes, and usage",
+    "section2Item6": "To improve, balance, and prevent abuse of the game",
+    
+    "section3Title": "Third-Party Services",
+    "section3Text": "Cop Dodger uses some third-party services. These services may process data according to their own privacy policies.",
+    "section3Item1": "<0>Google AdMob</0>: Used to display ads and measure ad performance.",
+    "section3Item2": "<0>Google User Messaging Platform (UMP)</0>: Used to manage your advertising privacy preferences in applicable regions.",
+    "section3Item3": "<0>Firebase Analytics</0>: Used to analyze app usage and in-game events.",
+    "section3Item4": "<0>RevenueCat</0>: Used to manage in-app purchases and subscription/product entitlements.",
+    "section3Item5": "<0>Google Play Games Services</0>: Used for sign-in, cloud save, and leaderboards on Android devices.",
+    "section3Item6": "<0>Apple Game Center</0>: May be used for leaderboards and game services on iOS devices.",
+    "section3Item7": "<0>Sentry or similar crash tracking systems</0>: May be used to detect app errors and technical issues.",
+    "section3Footer": "The data collected by these services may vary based on your device, country, consent preferences, and the platform you use.",
+    
+    "section4Title": "Ads and Privacy Preferences",
+    "section4Text1": "Cop Dodger may display ads. Ads are provided through Google AdMob.",
+    "section4Text2": "In regions such as the European Economic Area, the United Kingdom, and Switzerland, a privacy form may be presented via Google UMP to manage your advertising preferences. If available in the app settings, you can change your advertising preferences later from the <1>Privacy Options</1> section.",
+    "section4Text3": "Depending on your advertising preferences, personalized or non-personalized ads may be shown, or in some cases, no ad requests may be made.",
+    
+    "section5Title": "In-App Purchases",
+    "section5Text1": "Cop Dodger may offer in-app purchases. Purchases are made through Google Play or Apple App Store. RevenueCat is used for the verification and management of purchase entitlements.",
+    "section5Text2": "Your payment information is not directly received or stored by Cop Dodger. Payment transactions are managed by the respective app store.",
+    
+    "section6Title": "Game Services, Cloud Save, and Leaderboards",
+    "section6Text1": "If you sign in with Google Play Games Services or Apple Game Center, your game scores, leaderboard records, cloud save information, and game progress may be shared with or processed by these platform services.",
+    "section6Text2": "If you do not wish to use these features, you can choose not to sign in to the game services or change your platform account's privacy settings.",
+    
+    "section7Title": "Locally Stored Information",
+    "section7Text1": "Cop Dodger stores some information locally on your device. Examples include game settings, sound and vibration preferences, gold amount, high score, and similar game progress data.",
+    "section7Text2": "If you uninstall the app, some data stored locally on the device may be deleted. Data synchronized with cloud saves or platform services may remain in those services.",
+    
+    "section8Title": "Children's Privacy",
+    "section8Text": "Cop Dodger does not knowingly intend to collect personal information from children. If a parent or legal guardian believes that their child's data is being processed, they can contact us.",
+    
+    "section9Title": "Data Security",
+    "section9Text": "Reasonable technical and administrative measures are used to protect the security of data. However, no method of transmission over the internet or method of electronic storage is completely secure.",
+    
+    "section10Title": "Data Retention",
+    "section10Text": "Data may be retained for as long as necessary for the purposes stated in this policy. Local game data remains on your device. Data processed by third-party services may be retained according to the respective service's own retention policies.",
+    
+    "section11Title": "Your Rights",
+    "section11Text1": "Depending on the country or region you are in, you may have the right to access, correct, delete, restrict processing, or object to the processing of your personal data.",
+    "section11Text2": "You can change your advertising preferences from the privacy options within the app or from your device's ad/tracking settings. For data held in third-party services such as Google Play Games, Apple Game Center, Google, Apple, or RevenueCat, you may need to use the account and privacy settings of the respective service.",
+    
+    "section12Title": "Changes",
+    "section12Text": "This Privacy Policy may be updated from time to time. The current version becomes effective when published on this page.",
+    
+    "section13Title": "Contact",
+    "section13Text": "For privacy-related questions, you can contact the developer at the following email address:",
+    "contactEmail": "hckapplications@gmail.com",
+    "emailLabel": "<0>Email:</0> <1>{{contactEmail}}</1>"
+  }
+}

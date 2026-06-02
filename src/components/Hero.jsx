@@ -86,6 +86,22 @@ const Hero = () => { // TypeScript için FC tipi eklendi (opsiyonel)
                 </p>
               </Link>
 
+              {/* Graviton */}
+              <Link
+                to="/apps/graviton"
+                className="flex flex-col items-center w-24 text-center mx-3 transition-transform duration-200 ease-in-out transform hover:scale-110"
+              >
+                <img
+                  src="/apps/graviton/logo.png"
+                  alt={t('home.gravitonAlt', 'Graviton App Logo')}
+                  className="w-16 h-16 mb-2 border-2 border-white rounded-lg p-2 object-contain"
+                />
+                <p className="text-white mt-1 font-bold text-xs break-words">
+                  {t('home.graviton', 'Graviton')}
+                </p>
+              </Link>
+
+
               {/* Link 3 - Hedef URL güncellendi */}
               <Link
                 to="/apps/cryptobex" // Hedef URL: /apps/:appId formatında
