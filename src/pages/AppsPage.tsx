@@ -165,6 +165,40 @@ const appsData: App[] = [
       { type: "apple",  url: "https://apps.apple.com/tr/app/graviton-space-orbit/id6771879290",   buttonTextKey: "apps.downloadapple",  bgColor: "bg-[#000000]",       hoverBgColor: "hover:bg-[#333333]" },
     ],
   },
+  {
+    id: "copdodger",
+    name: "Cop Dodger",
+    logo: "/apps/copdodger/logo.png",
+    titleColor: "text-[#10B981]",
+    descriptionKey: "apps.copsection1",
+    features: [
+      { image: "/apps/copdodger/1.webp", titleKey: "apps.coptitle1", descKey: "apps.copdesc1" },
+      { image: "/apps/copdodger/2.webp", titleKey: "apps.coptitle2", descKey: "apps.copdesc2" },
+      { image: "/apps/copdodger/3.webp", titleKey: "apps.coptitle3", descKey: "apps.copdesc3" },
+    ],
+    stores: [
+      { type: "google", url: "https://play.google.com/store/apps/details?id=com.hck.car", buttonTextKey: "apps.downloadgoogle", bgColor: "bg-[#10B981]", hoverBgColor: "hover:bg-[#059669]" },
+      { type: "apple",  url: "https://apps.apple.com/tr/app/cop-dodger-run-away/id6776203816", buttonTextKey: "apps.downloadapple",  bgColor: "bg-[#000000]",       hoverBgColor: "hover:bg-[#333333]" },
+    ],
+  },
+  {
+    id: "boringgames",
+    name: "Boring Offline Games",
+    logo: "/apps/boringgames/logo.webp",
+    titleColor: "text-[#8B5CF6]",
+    descriptionKey: "apps.boringsection1",
+    features: [
+      { image: "/apps/boringgames/1.webp", titleKey: "apps.boringtitle1", descKey: "apps.boringdesc1" },
+      { image: "/apps/boringgames/2.webp", titleKey: "apps.boringtitle2", descKey: "apps.boringdesc2" },
+      { image: "/apps/boringgames/3.webp", titleKey: "apps.boringtitle3", descKey: "apps.boringdesc3" },
+      { image: "/apps/boringgames/4.webp", titleKey: "apps.boringtitle4", descKey: "apps.boringdesc4" },
+      { image: "/apps/boringgames/5.webp", titleKey: "apps.boringtitle5", descKey: "apps.boringdesc5" },
+    ],
+    stores: [
+      { type: "google", url: "https://play.google.com/store/apps/details?id=com.hck.thousands", buttonTextKey: "apps.downloadgoogle", bgColor: "bg-[#8B5CF6]", hoverBgColor: "hover:bg-[#7C3AED]" },
+      { type: "apple",  url: "https://apps.apple.com/tr/app/boring-offline-games/id6780210908", buttonTextKey: "apps.downloadapple",  bgColor: "bg-[#000000]",       hoverBgColor: "hover:bg-[#333333]" },
+    ],
+  },
 ];
 
 

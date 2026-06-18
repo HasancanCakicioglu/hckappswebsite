@@ -158,6 +158,36 @@ const Hero = () => { // TypeScript için FC tipi eklendi (opsiyonel)
                 </p>
               </Link>
 
+              {/* Cop Dodger */}
+              <Link
+                to="/apps/copdodger"
+                className="flex flex-col items-center w-24 text-center mx-3 transition-transform duration-200 ease-in-out transform hover:scale-110"
+              >
+                <img
+                  src="/apps/copdodger/logo.png"
+                  alt={t('home.copDodgerAlt', 'Cop Dodger App Logo')}
+                  className="w-16 h-16 mb-2 border-2 border-white rounded-lg p-2 object-contain"
+                />
+                <p className="text-white mt-1 font-bold text-xs break-words">
+                  {t('home.copDodger', 'Cop Dodger')}
+                </p>
+              </Link>
+
+              {/* Boring Offline Games */}
+              <Link
+                to="/apps/boringgames"
+                className="flex flex-col items-center w-24 text-center mx-3 transition-transform duration-200 ease-in-out transform hover:scale-110"
+              >
+                <img
+                  src="/apps/boringgames/logo.webp"
+                  alt={t('home.boringGamesAlt', 'Boring Offline Games App Logo')}
+                  className="w-16 h-16 mb-2 border-2 border-white rounded-lg p-2 object-contain"
+                />
+                <p className="text-white mt-1 font-bold text-xs break-words">
+                  {t('home.boringGames', 'Boring Games')}
+                </p>
+              </Link>
+
               {/* Websites (same style as apps, no white bg) */}
               <a
                 href="https://clickflag.com"
