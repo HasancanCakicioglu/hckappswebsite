@@ -188,6 +188,22 @@ const Hero = () => { // TypeScript için FC tipi eklendi (opsiyonel)
                 </p>
               </Link>
 
+              {/* 101 Calculator */}
+              <Link
+                to="/apps/101"
+                className="flex flex-col items-center w-24 text-center mx-3 transition-transform duration-200 ease-in-out transform hover:scale-110"
+              >
+                <img
+                  src="/apps/101/logo.webp"
+                  alt={t('home.calc101Alt', '101 Calculator App Logo')}
+                  className="w-16 h-16 mb-2 border-2 border-white rounded-lg p-2 object-contain"
+                />
+                <p className="text-white mt-1 font-bold text-xs break-words">
+                  {t('home.calc101', '101 Calculator')}
+                </p>
+              </Link>
+
+
               {/* Websites (same style as apps, no white bg) */}
               <a
                 href="https://clickflag.com"

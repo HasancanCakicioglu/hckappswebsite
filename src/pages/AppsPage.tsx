@@ -199,7 +199,21 @@ const appsData: App[] = [
       { type: "apple",  url: "https://apps.apple.com/tr/app/boring-offline-games/id6780210908", buttonTextKey: "apps.downloadapple",  bgColor: "bg-[#000000]",       hoverBgColor: "hover:bg-[#333333]" },
     ],
   },
+  {
+    id: "101",
+    name: "101 Calculator",
+    logo: "/apps/101/logo.webp",
+    titleColor: "text-[#FF5722]",
+    descriptionKey: "apps.calc101section1",
+    features: [
+      { image: "/apps/101/1.jpg", titleKey: "apps.calc101title1", descKey: "apps.calc101desc1" },
+    ],
+    stores: [
+     
+    ],
+  },
 ];
+
 
 
 
@@ -306,8 +320,7 @@ function AppShowcase({ apps, initialAppId }: AppShowcaseProps) {
             {selectedApp.features && selectedApp.features.length > 0 && (
               <div className="flex flex-wrap justify-center gap-4 md:gap-6 mt-8 mb-10">
                 {selectedApp.features.map((feature, index) => (
-                  // *** DEĞİŞİKLİK: Kartın maksimum genişliği küçültüldü ***
-                  <div key={index} className="max-w-[16rem] text-center bg-gray-50 rounded-lg shadow-md overflow-hidden p-3 flex flex-col"> {/* max-w-xs -> max-w-[14rem] */}
+                  <div key={index} className={`${selectedApp.features.length === 1 ? 'max-w-xl md:max-w-2xl w-full' : 'max-w-[16rem]'} text-center bg-gray-50 rounded-lg shadow-md overflow-hidden p-3 flex flex-col`}>
                     <img
                       src={feature.image}
                       alt={t(feature.titleKey, `Özellik ${index + 1}`)}

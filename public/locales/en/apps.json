@@ -97,6 +97,10 @@
     "boringtitle4": "Classic Challenges",
     "boringdesc4": "Test your reflexes and problem-solving skills with classic gaming concepts.",
     "boringtitle5": "Smooth Experience",
-    "boringdesc5": "Enjoy fluid gameplay designed to run efficiently on all mobile devices."
+    "boringdesc5": "Enjoy fluid gameplay designed to run efficiently on all mobile devices.",
+    "calc101section1": "101 Calculator is an AI-powered object detection and score calculation mobile app for 101 Okey. Scan your tiles with camera and calculate scores instantly.",
+    "calc101title1": "AI-Powered Tile Detection & Score Calculation",
+    "calc101desc1": "Scan 101 Okey tiles using your camera to calculate scores automatically in seconds."
   }
 }
+

@@ -97,7 +97,11 @@
     "boringtitle4": "Klasik Mücadeleler",
     "boringdesc4": "Klasik oyun konseptleriyle reflekslerinizi ve problem çözme becerilerinizi test edin.",
     "boringtitle5": "Akıcı Deneyim",
-    "boringdesc5": "Tüm mobil cihazlarda verimli çalışacak şekilde optimize edilmiş akıcı oynanışın tadını çıkarın."
+    "boringdesc5": "Tüm mobil cihazlarda verimli çalışacak şekilde optimize edilmiş akıcı oynanışın tadını çıkarın.",
+    "calc101section1": "101 Calculator, 101 Okey oyunu için yapay zeka destekli nesne algılama ve otomatik skor hesaplama sunan bir mobil uygulamadır. Taşları kameranızla tarayın ve skorları anında hesaplayın.",
+    "calc101title1": "Yapay Zeka Destekli Taş Algılama & Skor Hesaplama",
+    "calc101desc1": "Kamera ile 101 Okey taşlarını tarayarak skorları saniyeler içinde otomatik olarak hesaplayın."
   }
 }
+
 
