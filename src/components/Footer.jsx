@@ -81,6 +81,7 @@ const Footer = () => {
               <li className='py-1 text-sm'><Link to={"/privacy-policy-graviton"}>{t('footer.privacypolicygraviton')}</Link></li>
               <li className='py-1 text-sm'><Link to={"/privacy-policy-copdodger"}>{t('footer.privacypolicycopdodger')}</Link></li>
               <li className='py-1 text-sm'><Link to={"/privacy-policy-boringofflinegames"}>{t('footer.privacypolicyboringofflinegames')}</Link></li>
+              <li className='py-1 text-sm'><Link to={"/privacy-policy-101calculator"}>{t('footer.privacypolicy101calculator')}</Link></li>
             </ul>
           </div>
         </div>

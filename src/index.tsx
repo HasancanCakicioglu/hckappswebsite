@@ -27,6 +27,7 @@ import PrivacyPolicyMinesweeper from './pages/privacy-policy/PrivacyPolicyMinesw
 import PrivacyPolicyGraviton from './pages/privacy-policy/PrivacyPolicyGraviton.tsx';
 import PrivacyPolicyCopDodger from './pages/privacy-policy/PrivacyPolicyCopDodger.tsx';
 import PrivacyPolicyBoringOfflineGames from './pages/privacy-policy/PrivacyPolicyBoringOfflineGames.tsx';
+import PrivacyPolicy101Calculator from './pages/privacy-policy/PrivacyPolicy101Calculator.tsx';
 
 
 const router = createBrowserRouter([
@@ -110,6 +111,10 @@ const router = createBrowserRouter([
   {
     "path": "/privacy-policy-boringofflinegames",
     "element": <Layout><PrivacyPolicyBoringOfflineGames /></Layout>
+  },
+  {
+    "path": "/privacy-policy-101calculator",
+    "element": <Layout><PrivacyPolicy101Calculator /></Layout>
   },
   {
     "path": "/audiobook",
