@@ -209,7 +209,8 @@ const appsData: App[] = [
       { image: "/apps/101/1.jpg", titleKey: "apps.calc101title1", descKey: "apps.calc101desc1" },
     ],
     stores: [
-     
+      { type: "google", url: "https://play.google.com/store/apps/details?id=com.hck.okey", buttonTextKey: "apps.downloadgoogle", bgColor: "bg-[#FF5722]", hoverBgColor: "hover:bg-[#E64A19]" },
+      { type: "apple",  url: "https://apps.apple.com/app/id6794612091", buttonTextKey: "apps.downloadapple",  bgColor: "bg-[#000000]",       hoverBgColor: "hover:bg-[#333333]" },
     ],
   },
 ];
