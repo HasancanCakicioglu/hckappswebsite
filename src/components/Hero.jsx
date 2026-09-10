@@ -206,6 +206,19 @@ const Hero = () => { // TypeScript için FC tipi eklendi (opsiyonel)
 
               {/* Websites (same style as apps, no white bg) */}
               <a
+                href="https://cvshell.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center w-24 text-center mx-3 transition-transform duration-200 ease-in-out transform hover:scale-110"
+              >
+                <img
+                  src="/apps/cvshell/logo.svg"
+                  alt="CV Shell"
+                  className="w-16 h-16 mb-2 border-2 border-white rounded-lg p-2 object-contain"
+                />
+                <p className="text-white mt-1 font-bold text-xs break-words">CV Shell</p>
+              </a>
+              <a
                 href="https://clickflag.hckapps.com"
                 target="_blank"
                 rel="noopener noreferrer"

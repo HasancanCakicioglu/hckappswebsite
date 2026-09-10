@@ -6,6 +6,13 @@ const WebsitesPage = () => {
 
   const websites = [
     {
+      id: "cvshell",
+      name: "CV Shell",
+      url: "https://cvshell.com",
+      description: "examples.cvshell",
+      logo: "/apps/cvshell/logo.svg",
+    },
+    {
       id: "hckapps",
       name: "HCK Apps",
       url: "https://hckapps.com",
@@ -49,7 +56,7 @@ const WebsitesPage = () => {
             >
               <div className="flex items-start gap-4">
                 <div className="shrink-0 w-14 h-14 rounded-lg bg-white flex items-center justify-center ring-1 ring-gray-200">
-                  <img src={site.logo} alt={site.name} className="w-10 h-10 object-contain" />
+                  <img src={site.logo} alt={site.name} className="w-10 h-10 object-contain rounded-md" />
                 </div>
                 <div className="min-w-0">
                   <h2 className="text-white text-2xl font-semibold tracking-tight group-hover:text-[#00df9a] transition-colors">
