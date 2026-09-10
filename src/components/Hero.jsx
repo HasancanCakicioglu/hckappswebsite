@@ -206,7 +206,7 @@ const Hero = () => { // TypeScript için FC tipi eklendi (opsiyonel)
 
               {/* Websites (same style as apps, no white bg) */}
               <a
-                href="https://clickflag.com"
+                href="https://clickflag.hckapps.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-col items-center w-24 text-center mx-3 transition-transform duration-200 ease-in-out transform hover:scale-110"

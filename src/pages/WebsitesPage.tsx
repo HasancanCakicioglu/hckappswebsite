@@ -22,7 +22,7 @@ const WebsitesPage = () => {
     {
       id: "clickflag",
       name: "ClickFlag",
-      url: "https://clickflag.com",
+      url: "https://clickflag.hckapps.com",
       description: "examples.clickflag",
       logo: "/apps/clickflag/clickflaglogo.ico",
     },
