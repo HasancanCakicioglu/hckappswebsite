@@ -28,6 +28,7 @@ import PrivacyPolicyGraviton from './pages/privacy-policy/PrivacyPolicyGraviton.
 import PrivacyPolicyCopDodger from './pages/privacy-policy/PrivacyPolicyCopDodger.tsx';
 import PrivacyPolicyBoringOfflineGames from './pages/privacy-policy/PrivacyPolicyBoringOfflineGames.tsx';
 import PrivacyPolicy101Calculator from './pages/privacy-policy/PrivacyPolicy101Calculator.tsx';
+import PrivacyPolicyEverFeast from './pages/privacy-policy/PrivacyPolicyEverFeast.tsx';
 
 
 const router = createBrowserRouter([
@@ -115,6 +116,10 @@ const router = createBrowserRouter([
   {
     "path": "/privacy-policy-101calculator",
     "element": <Layout><PrivacyPolicy101Calculator /></Layout>
+  },
+  {
+    "path": "/privacy-policy-everfeast",
+    "element": <Layout><PrivacyPolicyEverFeast /></Layout>
   },
   {
     "path": "/audiobook",
