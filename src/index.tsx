@@ -29,6 +29,7 @@ import PrivacyPolicyCopDodger from './pages/privacy-policy/PrivacyPolicyCopDodge
 import PrivacyPolicyBoringOfflineGames from './pages/privacy-policy/PrivacyPolicyBoringOfflineGames.tsx';
 import PrivacyPolicy101Calculator from './pages/privacy-policy/PrivacyPolicy101Calculator.tsx';
 import PrivacyPolicyEverFeast from './pages/privacy-policy/PrivacyPolicyEverFeast.tsx';
+import PrivacyPolicyNotebookSurvivors from './pages/privacy-policy/PrivacyPolicyNotebookSurvivors.tsx';
 
 
 const router = createBrowserRouter([
@@ -120,6 +121,10 @@ const router = createBrowserRouter([
   {
     "path": "/privacy-policy-everfeast",
     "element": <Layout><PrivacyPolicyEverFeast /></Layout>
+  },
+  {
+    "path": "/privacy-policy-notebooksurvivors",
+    "element": <Layout><PrivacyPolicyNotebookSurvivors /></Layout>
   },
   {
     "path": "/audiobook",

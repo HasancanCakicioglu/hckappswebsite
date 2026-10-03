@@ -270,109 +270,155 @@ function AppShowcase({ apps, initialAppId }: AppShowcaseProps) {
 
 
   return (
-    <div className="bg-black text-white min-h-screen flex flex-col">
-      {/* Uygulama İkon Seçici */}
-      <div className="flex justify-center items-start py-8 mb-8 flex-wrap">
-        {apps.map((app) => (
-          <button
-            key={app.id}
-            onClick={() => handleIconClick(app.id)}
-            // *** DEĞİŞİKLİK: Buton boyutu orijinal haline getirildi ***
-            className={`cursor-pointer flex flex-col items-center p-2 mx-2 md:mx-4 w-24 md:w-28 text-center transition-transform duration-200 ease-in-out transform hover:scale-110 ${ // w-20 -> w-24, md:w-24 -> md:w-28
-              selectedAppId === app.id ? 'scale-110' : ''
-            }`}
-            aria-label={`${app.name} seç`}
-          >
-            <img
-              src={app.logo}
-              alt={`${app.name} Logosu`}
-              // *** DEĞİŞİKLİK: İkon boyutları orijinal haline getirildi ***
-              className={`w-16 h-16 md:w-20 md:h-20 mb-2 border-2 rounded-lg p-1 object-contain transition-all duration-300 ${ // w-14 h-14 md:w-[4.25rem] md:h-[4.25rem] -> w-16 h-16 md:w-20 md:h-20
-                selectedAppId === app.id
-                  ? 'border-white shadow-lg shadow-white/30'
-                  : 'border-gray-600 hover:border-gray-400'
-              }`}
-              onError={handleImageError}
-            />
-            <p className={`text-white mt-2 font-bold text-xs md:text-sm break-words ${
-              selectedAppId === app.id ? 'opacity-100' : 'opacity-75 hover:opacity-100'
-            }`}>
-              {app.name}
-            </p>
-          </button>
-        ))}
+    <div className="bg-black text-white min-h-[calc(100vh-96px)] flex flex-col">
+      {/* Compact Top Header & App Selector */}
+      <div className="max-w-6xl mx-auto w-full pt-6 pb-2 px-4">
+        <div className="flex items-center justify-between mb-3 px-1">
+          <div className="flex items-center space-x-2">
+            <span className="w-2 h-2 rounded-full bg-[#00df9a]" />
+            <h1 className="text-base sm:text-lg font-bold text-white tracking-wide uppercase">
+              {t("apps.ourApps", "Mobile Apps & Games")}
+            </h1>
+          </div>
+          <span className="text-[11px] font-mono text-gray-400">
+            {apps.length} Apps • Swipe to explore
+          </span>
+        </div>
+
+        {/* Compact Uygulama İkon Seçici */}
+        <div className="flex items-center justify-start md:justify-center overflow-x-auto py-2 gap-2.5 no-scrollbar">
+          {apps.map((app) => {
+            const isSelected = selectedAppId === app.id;
+            return (
+              <button
+                key={app.id}
+                onClick={() => handleIconClick(app.id)}
+                className={`cursor-pointer flex flex-col items-center p-2 rounded-xl border transition-all duration-200 flex-shrink-0 w-20 md:w-24 text-center ${
+                  isSelected
+                    ? "bg-[#0c1322] border-[#00df9a] shadow-md shadow-[#00df9a]/25 scale-102"
+                    : "bg-[#0c1018]/60 border-gray-800/80 hover:border-gray-700 hover:bg-gray-900/60 opacity-70 hover:opacity-100"
+                }`}
+                aria-label={`${app.name} seç`}
+              >
+                <div className={`w-11 h-11 md:w-12 md:h-12 rounded-lg bg-black/80 p-1 mb-1.5 border flex items-center justify-center transition-all ${
+                  isSelected ? "border-[#00df9a]/60 shadow-sm shadow-[#00df9a]/30" : "border-gray-800"
+                }`}>
+                  <img
+                    src={app.logo}
+                    alt={`${app.name} Logosu`}
+                    className="w-full h-full object-contain"
+                    onError={handleImageError}
+                  />
+                </div>
+                <p className={`text-[11px] md:text-xs font-semibold truncate w-full ${
+                  isSelected ? "text-[#00df9a]" : "text-gray-300"
+                }`}>
+                  {app.name}
+                </p>
+              </button>
+            );
+          })}
+        </div>
       </div>
 
-      {/* Uygulama Detayları Bölümü */}
+      {/* Uygulama Detayları Bölümü (Kompakt ve Dengeli) */}
       {selectedApp ? (
-        <div id={`details_${selectedApp.id}`} className="bg-white text-black w-full flex-grow">
-          <div className="container mx-auto px-4 py-8">
-            {/* Başlık ve Açıklama */}
-            <div className="text-center mb-8">
-              <h1 className={`text-3xl md:text-4xl font-bold ${selectedApp.titleColor} mb-4`}>
-                {selectedApp.name}
-              </h1>
-              <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-                {t(selectedApp.descriptionKey, `${selectedApp.name} için açıklama`)}
-              </p>
+        <div
+          id={`details_${selectedApp.id}`}
+          className="w-full flex-grow bg-gradient-to-b from-[#090d16] via-[#0b101c] to-black border-t border-gray-800/80 py-6 px-4"
+        >
+          <div className="max-w-6xl mx-auto space-y-6">
+            {/* Integrated Header: Logo + Info + Store Buttons */}
+            <div className="bg-[#0c1018]/80 border border-gray-800/80 rounded-2xl p-5 md:p-6 flex flex-col md:flex-row items-center md:items-start justify-between gap-5">
+              <div className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-4 max-w-2xl">
+                <div className="w-16 h-16 md:w-18 md:h-18 rounded-2xl bg-black/90 p-2 border border-gray-700/80 shadow-lg flex-shrink-0 flex items-center justify-center">
+                  <img
+                    src={selectedApp.logo}
+                    alt={selectedApp.name}
+                    className="w-full h-full object-contain"
+                    onError={handleImageError}
+                  />
+                </div>
+                <div>
+                  <h2 className={`text-2xl md:text-3xl font-extrabold ${selectedApp.titleColor} tracking-tight`}>
+                    {selectedApp.name}
+                  </h2>
+                  <p className="text-sm text-gray-300 mt-1.5 leading-relaxed">
+                    {t(selectedApp.descriptionKey, `${selectedApp.name} için açıklama`)}
+                  </p>
+                </div>
+              </div>
+
+              {/* Store Download Buttons */}
+              {selectedApp.stores && selectedApp.stores.length > 0 && (
+                <div className="flex md:flex-col gap-2.5 flex-shrink-0 w-full md:w-auto justify-center">
+                  {selectedApp.stores.map((store) => (
+                    <a
+                      key={store.type}
+                      href={store.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`text-xs md:text-sm font-semibold py-2.5 px-4 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:scale-102 flex items-center justify-center space-x-2 ${
+                        store.type === "google"
+                          ? "bg-[#00df9a] hover:bg-[#00c87b] text-black shadow-[#00df9a]/20"
+                          : "bg-gray-950 border border-gray-700 hover:border-gray-500 text-white shadow-black/40"
+                      }`}
+                    >
+                      {store.type === "google" && <FaGooglePlay size={14} />}
+                      {store.type === "apple" && <FaApple size={15} />}
+                      <span>{t(store.buttonTextKey, `İndir`)}</span>
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
 
-            {/* Özellikler Bölümü */}
+            {/* Yatay Kayan Ekran Görüntüleri Galerisi (Dikey Yığılmayı Önler!) */}
             {selectedApp.features && selectedApp.features.length > 0 && (
-              <div className="flex flex-wrap justify-center gap-4 md:gap-6 mt-8 mb-10">
-                {selectedApp.features.map((feature, index) => (
-                  <div key={index} className={`${selectedApp.features.length === 1 ? 'max-w-xl md:max-w-2xl w-full' : 'max-w-[16rem]'} text-center bg-gray-50 rounded-lg shadow-md overflow-hidden p-3 flex flex-col`}>
-                    <img
-                      src={feature.image}
-                      alt={t(feature.titleKey, `Özellik ${index + 1}`)}
-                      // *** DEĞİŞİKLİK: Resim ölçeklemesi kaldırıldı ***
-                      className={`w-full h-auto object-contain mb-3 rounded ${ // transform scale-[0.85] kaldırıldı
-                        selectedApp.id === 'phototranslator' && index === 1
-                          ? 'min-h-48 md:min-h-56'
-                          : 'min-h-40'
-                      }`}
-                      onError={handleImageError}
-                    />
-                    {/* Metin içeriği */}
-                    <div className="p-2 flex-grow flex flex-col justify-between">
-                      <h3 className="text-sm md:text-md font-bold text-black mb-1">
-                        {t(feature.titleKey, `Özellik ${index + 1} Başlığı`)}
-                      </h3>
-                      <p className="text-black font-semibold text-xs md:text-sm">
-                        {t(feature.descKey, `Özellik ${index + 1} Açıklaması`)}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
+              <div>
+                <div className="flex items-center justify-between mb-3 px-1">
+                  <h3 className="text-xs font-mono uppercase tracking-wider text-gray-400 flex items-center space-x-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#00df9a]" />
+                    <span>Screenshots & Features</span>
+                  </h3>
+                  <span className="text-[11px] text-gray-500 font-mono">
+                    ← Yatay Kaydırın / Swipe →
+                  </span>
+                </div>
 
-            {/* İndirme Butonları */}
-            {selectedApp.stores && selectedApp.stores.length > 0 && (
-              <div className="flex justify-center items-center mt-8 space-x-4 flex-wrap gap-y-4">
-                {selectedApp.stores.map((store) => (
-                  <a
-                    key={store.type}
-                    href={store.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`text-base md:text-lg text-white flex items-center justify-center ${store.bgColor} ${store.hoverBgColor} py-2 px-5 rounded-full transition-colors duration-200 shadow-md hover:shadow-lg`}
-                    aria-label={`${selectedApp.name} uygulamasını ${store.type === 'google' ? 'Google Play' : 'Apple App Store'} mağazasından indir`}
-                  >
-                    {store.type === "google" && <FaGooglePlay className="mr-2" />}
-                    {store.type === "apple" && <FaApple className="mr-2" />}
-                    {t(store.buttonTextKey, `İndir`)}
-                  </a>
-                ))}
+                <div className="flex overflow-x-auto gap-4 py-2 px-1 no-scrollbar snap-x">
+                  {selectedApp.features.map((feature, index) => (
+                    <div
+                      key={index}
+                      className="w-48 sm:w-56 shrink-0 snap-start bg-[#0c1018]/90 border border-gray-800/90 hover:border-gray-700 rounded-2xl shadow-xl p-3 flex flex-col justify-between transition-all duration-200"
+                    >
+                      <div className="bg-black/60 rounded-xl overflow-hidden mb-2.5 border border-gray-800/60 p-1 flex items-center justify-center h-52 sm:h-60">
+                        <img
+                          src={feature.image}
+                          alt={t(feature.titleKey, `Özellik ${index + 1}`)}
+                          className="w-full h-full object-contain rounded-lg"
+                          onError={handleImageError}
+                        />
+                      </div>
+                      <div className="text-left px-1">
+                        <h4 className="text-xs sm:text-sm font-bold text-white truncate">
+                          {t(feature.titleKey, `Özellik ${index + 1} Başlığı`)}
+                        </h4>
+                        <p className="text-gray-400 text-[11px] sm:text-xs mt-1 line-clamp-2 leading-relaxed">
+                          {t(feature.descKey, `Özellik ${index + 1} Açıklaması`)}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
           </div>
         </div>
       ) : (
-            // Seçili uygulama yoksa gösterilecek mesaj
-            <div className="text-center py-10 text-gray-500 flex-grow flex items-center justify-center">
-              <p>Detayları görmek için lütfen yukarıdan bir uygulama ikonu seçin.</p>
-            </div>
+        <div className="text-center py-12 text-gray-500 flex-grow flex items-center justify-center">
+          <p>Detayları görmek için lütfen yukarıdan bir uygulama seçin.</p>
+        </div>
       )}
     </div>
   );

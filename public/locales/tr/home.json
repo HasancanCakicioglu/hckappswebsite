@@ -5,7 +5,11 @@
     "subheading": "Hızlı, duyarlı ve zengin özelliklerle",
     "typedStrings": ["Kişisel Projeler", "İş Çözümleri", "Eğlence"],
     "description": "İhtiyaçlarınıza göre uyarlanmış mobil uygulamalarla günlük verimliliğinizi artırın.",
-    "discoverApps": "Uygulamalara Göz Atın",
+    "discoverApps": "Uygulama Ekosistemimiz",
+    "hoverToPause": "Durdurmak için üzerine gelin",
+    "viewMobileApps": "Mobil Uygulamalar & Oyunlar",
+    "viewExtensions": "Eklentiler",
+    "viewWebsites": "Web Platformları",
     "voidNote": "VoidNote",
     "weechess": "WeeChess",
     "weechessAlt": "WeeChess Uygulama Logosu",
@@ -21,4 +25,3 @@
     "calc101Alt": "101 Calculator Uygulama Logosu"
   }
 }
-

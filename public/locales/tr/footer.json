@@ -2,14 +2,18 @@
   "footer": {
     "about": "HCK Apps, yenilikçi çözümler sunmaya odaklanmış bir mobil uygulama geliştirme şirketidir. Uygulamalarımız, verimliliği artırmak, iş akışlarını düzenlemek ve kullanıcı deneyimlerini geliştirmek için tasarlanmıştır. Çeşitli ihtiyaçlara yönelik uyarlanmış uygulama yelpazemizi keşfedin.",
     "hckapps": "HCK Apps",
-    "solutions": "Çözümler",
+    "solutions": "Keşfet",
     "mobileapps": "Mobil Uygulamalar",
+    "extensions": "Eklentiler",
+    "websites": "Web Siteleri",
     "support": "Destek",
     "company": "Şirket",
-    "legal": "Yasal",
+    "legal": "Gizlilik Politikaları",
     "helpcenter": "Yardım Merkezi",
     "contact": "İletişim",
     "aboutme": "Hakkımda",
+    "copyright": "Tüm hakları saklıdır.",
+    "designedby": "Hasancan Çakıcıoğlu",
     "privacypolicyvoidnote": "VoidNote",
     "privacypolicycrypobex": "Cryptobex",
     "privacypolicyphototranslator": "Photo Translator",
@@ -21,7 +25,7 @@
     "privacypolicycopdodger": "Cop Dodger",
     "privacypolicyboringofflinegames": "Sıkıcı İnternetsiz Oyunlar",
     "privacypolicy101calculator": "101 Calculator",
-    "privacypolicyeverfeast": "EverFeast"
+    "privacypolicyeverfeast": "EverFeast",
+    "privacypolicynotebooksurvivors": "Notebook Survivors"
   }
 }
-
